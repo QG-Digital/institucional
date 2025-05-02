@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QG.Digital | Trabalhe Conosco</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="logo-animation">QG<span>.</span>Digital</div>
+      <div class="spinner">
+        <div class="dot dot1"></div>
+        <div class="dot dot2"></div>
+        <div class="dot dot3"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cabeçalho -->
+  <header class="header" id="header">
+    <div class="container">
+      <h1 class="logo">QG<span>.</span>Digital</h1>
+      <nav>
+        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="empresa.html">Empresa</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="trabalhe-conosco.html" class="active">Trabalhe Conosco</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div id="particles-js"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h2 class="reveal-text">Faça Parte do Nosso Time</h2>
+        <p class="subtitle reveal-text delay-200">Junte-se a nós e transforme o futuro do mercado digital</p>
+      </div>
+    </div>
+    <div class="hero-divider">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Formulário Section -->
+  <section class="trabalhe-conosco" id="cadastro">
+    <div class="container">
+      <div class="form-container reveal-bottom">
+        <div id="formSuccess" class="form-success" style="display: none;">
+          <i class="fas fa-check-circle"></i>
+          <span>Sua candidatura foi enviada com sucesso! Em breve entraremos em contato.</span>
+        </div>
+        <form id="talentoForm" class="trabalhe-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome Completo*</label>
+              <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+              <label for="idade">Idade*</label>
+              <input type="number" id="idade" name="idade" min="16" max="99" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cidade">Cidade*</label>
+              <input type="text" id="cidade" name="cidade" required>
+            </div>
+            <div class="form-group">
+              <label for="uf">UF*</label>
+              <select id="uf" name="uf" required>
+                <option value="">Selecione...</option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="mensagem">Conte-nos um pouco sobre você*</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-lg">Enviar Candidatura</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-col">
+            <h3>QG.Digital</h3>
+            <p>Software inteligente. Preço justo. Resultado real.</p>
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Links Rápidos</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="empresa.html">Empresa</a></li>
+              <li><a href="servicos.html">Serviços</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Contato</h3>
+            <p><i class="fab fa-whatsapp"></i> (43) 99634-9824</p>
+            <p><i class="fas fa-envelope"></i> atendimento.qgdigital@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Londrina, PR</p>
+          </div>
+          <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>Receba novidades e atualizações sobre nossos produtos</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Seu e-mail" required>
+              <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 QG.Digital - Todos os direitos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão Flutuante do WhatsApp -->
+  <a href="https://wa.me/5543996349824" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Fale Conosco</span>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <style>
+    /* Estilos específicos da página Trabalhe Conosco */
+    .trabalhe-conosco {
+      padding: var(--space-xxl) 0;
+      background: var(--white);
+    }
+    
+    .form-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: var(--space-xl);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .trabalhe-form .form-row {
+      display: flex;
+      gap: var(--space-md);
+      margin-bottom: var(--space-md);
+    }
+    
+    .trabalhe-form .form-row .form-group {
+      flex: 1;
+    }
+    
+    .trabalhe-form .form-group {
+      margin-bottom: var(--space-md);
+    }
+    
+    .trabalhe-form label {
+      display: block;
+      margin-bottom: var(--space-xs);
+      font-size: 0.9rem;
+      color: var(--dark-gray);
+    }
+    
+    .trabalhe-form input,
+    .trabalhe-form select,
+    .trabalhe-form textarea {
+      width: 100%;
+      padding: var(--space-md);
+      border: 1px solid var(--light-gray);
+      border-radius: var(--radius-md);
+      transition: var(--transition-normal);
+    }
+    
+    .trabalhe-form input:focus,
+    .trabalhe-form select:focus,
+    .trabalhe-form textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(16, 31, 77, 0.1);
+    }
+    
+    .form-actions {
+      margin-top: var(--space-xl);
+      text-align: center;
+    }
+
+    /* Mensagem de sucesso do formulário */
+    .form-success {
+      display: none;
+      padding: var(--space-md);
+      background: rgba(40, 167, 69, 0.2);
+      border: 1px solid #28a745;
+      color: #155724;
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-lg);
+      text-align: center;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .form-success i {
+      color: #28a745;
+      margin-right: var(--space-sm);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Responsivo */
+    @media (max-width: 767px) {
+      .trabalhe-form .form-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/slider.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Form submission
+      const form = document.getElementById('talentoForm');
+      const successMessage = document.getElementById('formSuccess');
+      
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          
+          const submitBtn = form.querySelector('button[type="submit"]');
+          const originalText = submitBtn.textContent;
+          
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+          
+          // Esconde a mensagem de sucesso se estiver visível
+          successMessage.style.display = 'none';
+          
+          // Simula o envio do formulário
+          setTimeout(() => {
+            // Mostra a mensagem de sucesso
+            successMessage.style.display = 'block';
+            
+            // Rola a página até a mensagem
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            // Reseta o formulário
+            form.reset();
+            
+            // Restaura o botão
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+            
+            // Esconde a mensagem após 5 segundos
+            setTimeout(() => {
+              successMessage.style.display = 'none';
+            }, 5000);
+          }, 2000);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
