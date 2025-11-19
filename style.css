@@ -2153,3 +2153,106 @@ input, textarea, select {
 #grafico-bonus {
   animation: floatAnimation 6s ease-in-out infinite;
 }
+
+/* ============================================
+   MELHORIAS DE RESPONSIVIDADE - DADOS ABERTOS
+   ============================================ */
+
+/* Ajuste para o container de filtros em telas menores */
+@media (max-width: 1024px) {
+    .filtros-container {
+        /* Permite que os itens se ajustem em mais de uma linha */
+        justify-content: flex-start;
+        gap: var(--space-md); /* Reduz o espaçamento entre os itens */
+    }
+
+    .filtro-item {
+        /* Garante que cada item de filtro ocupe uma largura razoável */
+        min-width: 150px;
+        flex-grow: 1; /* Permite que cresçam para preencher o espaço */
+    }
+
+    .filtro-item select,
+    .filtro-item input {
+        min-width: 100%; /* Garante que o campo preencha o item */
+    }
+
+    /* Alinha os botões para que fiquem abaixo dos filtros em telas menores */
+    #btn-limpar-filtros,
+    #btn-exportar-csv {
+        margin-left: 0;
+        flex-grow: 1;
+        width: 100%; /* Ocupa a largura total */
+    }
+    
+    /* Garante que os botões fiquem em uma linha separada */
+    .filtros-container button {
+        margin-top: var(--space-sm);
+    }
+}
+
+/* Ajuste para o container de filtros em telas muito pequenas (mobile) */
+@media (max-width: 768px) {
+    .filtros-container {
+        padding: var(--space-md);
+        flex-direction: column; /* Empilha os filtros verticalmente */
+        gap: var(--space-md);
+    }
+
+    .filtro-item {
+        min-width: 100%; /* Ocupa a largura total */
+    }
+
+    .filtro-item select,
+    .filtro-item input {
+        min-width: 100%;
+    }
+
+    /* Garante que os botões ocupem a largura total */
+    #btn-limpar-filtros,
+    #btn-exportar-csv {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    /* Ajuste para o grid de cards de totais */
+    .cards-totais-grid {
+        grid-template-columns: 1fr; /* Empilha os cards verticalmente */
+        gap: var(--space-md);
+    }
+
+    /* Ajuste para o grid de gráficos */
+    .graficos-grid {
+        grid-template-columns: 1fr; /* Empilha os gráficos verticalmente */
+        gap: var(--space-xl);
+    }
+    
+    /* Garante que a tabela não cause overflow horizontal */
+    .tabela-wrapper {
+        overflow-x: auto;
+    }
+
+    /* Garante que a tabela financeira não quebre */
+    #tabela-financeiro {
+        min-width: 300px; /* Garante que a tabela tenha uma largura mínima */
+    }
+}
+
+/* Ajuste para a tabela de gastos em telas muito pequenas */
+@media (max-width: 576px) {
+    /* Oculta colunas menos importantes para caber na tela */
+    #tabela-gastos th:nth-child(3), 
+    #tabela-gastos td:nth-child(3) {
+        display: none; /* Oculta a coluna Categoria */
+    }
+    
+    #tabela-gastos th:nth-child(1), 
+    #tabela-gastos td:nth-child(1) {
+        min-width: 80px; /* Garante que a data tenha espaço */
+    }
+    
+    #tabela-gastos th:nth-child(4), 
+    #tabela-gastos td:nth-child(4) {
+        min-width: 100px; /* Garante que o valor tenha espaço */
+    }
+}
