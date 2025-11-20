@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Título e Descrição (que o seu JS vai mudar) -->
+  <title>QG.Digital | Revolucionando o Mercado Digital</title>
+  <meta name="description" content="Software inteligente, preço justo e resultado real. Conheça nossas soluções, como o Financeiro PRO, e transforme seu negócio.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="icone.ico" type="image/x-icon">
+
+  <!-- Open Graph (para WhatsApp, Facebook, etc.) - ADICIONE ISSO -->
+  <meta property="og:title" content="QG.Digital | Revolucionando o Mercado Digital">
+  <meta property="og:description" content="Software inteligente, preço justo e resultado real.">
+  <meta property="og:image" content="https://seusite.com.br/logo.png"> <!-- Use o link completo para a imagem -->
+  <meta property="og:url" content="https://seusite.com.br"> <!-- Use o link completo do seu site -->
+  <meta property="og:type" content="website">
+
+  <!-- Dados Estruturados (para o Google) - ADICIONE ISSO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "QG.Digital",
+    "url": "https://qg-digital.github.io/institucional/",
+    "logo": "https://seusite.com.br/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+55-43-99634-9824",
+      "contactType": "customer service",
+      "areaServed": "BR",
+      "availableLanguage": "Portuguese"
+    },
+    "sameAs": [
+      "https://www.instagram.com/quebra_galho.digital/"
+    ]
+  }
+  </script>
+
+  <!-- CSS e Fontes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <img src="logo.png" alt="Logo QG.Digital" style="max-height: 60px; margin-bottom: 24px;">
+      <div class="spinner">
+        <div class="dot dot1"></div>
+        <div class="dot dot2"></div>
+        <div class="dot dot3"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cabeçalho -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#" data-page="home" class="logo"><img src="logo.png" alt="Logo da QG.Digital"></a>
+      <nav class="nav">
+        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#" data-page="home" class="nav-link active">Home</a></li>
+          <li><a href="#" data-page="financeiro" class="nav-link">Financeiro PRO</a></li>
+          <li><a href="#" data-page="servicos" class="nav-link">Serviços</a></li>
+          <li><a href="#" data-page="empresa" class="nav-link">Empresa</a></li>
+          <li><a href="#" data-page="faq" class="nav-link">FAQ</a></li>
+          <li><a href="#" data-page="afiliados" class="nav-link">Seja Afiliado</a></li>
+		  <li><a href="#" data-page="dados-abertos" class="nav-link">Dados Abertos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main id="mainContent">
+    
+    <!-- ============ HOME PAGE ============ -->
+    <div id="home-page" class="page active">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-title">Revolucionando o mercado digital</h1>
+            <p class="hero-subtitle">Software inteligente. Preço justo. Resultado real.</p>
+            <div class="cta-buttons">
+              <a href="#" data-page="financeiro" class="btn btn-primary">Conheça o Financeiro PRO</a>
+              <a href="#" data-page="servicos" class="btn btn-secondary">Ver Todos os Serviços</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="foto.png" alt="Equipe da QG.Digital em uma reunião de planejamento estratégico">
+          </div>
+        </div>
+      </section>
+
+      <!-- Números Section -->
+      <section class="numeros">
+        <div class="container">
+          <div class="numeros-grid">
+            <div class="numero-item">
+              <div class="numero-circle">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <div class="numero-counter" data-target="95">0</div>
+              <p>Projetos Entregues</p>
+            </div>
+            <div class="numero-item">
+              <div class="numero-circle">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="numero-counter" data-target="87">0</div>
+              <p>Clientes Satisfeitos</p>
+            </div>
+            <div class="numero-item">
+              <div class="numero-circle">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="numero-counter" data-target="100">0</div>
+              <p>Suporte Garantido</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Destaque Financeiro PRO -->
+      <section class="destaque-financeiro">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Nosso Principal Produto</h2>
+            <div class="heading-line"></div>
+          </div>
+          <div class="financeiro-preview">
+            <div class="financeiro-text">
+              <h3>Financeiro PRO</h3>
+              <p class="destaque-p">Dividir contas nunca foi tão fácil.</p>
+              <p>A planilha inteligente que sua família (e seus amigos) sempre quis. Chega de discussões e cálculos complicados no fim do mês.</p>
+              <ul class="features-list">
+                <li><i class="fas fa-check"></i> Divisão proporcional ao salário</li>
+                <li><i class="fas fa-check"></i> Lançamento de despesas em segundos</li>
+                <li><i class="fas fa-check"></i> Pessoas ilimitadas no grupo</li>
+                <li><i class="fas fa-check"></i> Suporte prioritário via WhatsApp</li>
+              </ul>
+              <a href="#" data-page="financeiro" class="btn btn-primary">Conhecer Financeiro PRO</a>
+            </div>
+            <div class="financeiro-image">
+              <div class="dashboard-mockup">
+                <div class="dashboard-header">Dashboard Financeiro PRO</div>
+                <div class="dashboard-content">
+                  <div class="dashboard-item">
+                    <span>Total de Despesas</span>
+                    <strong>R$ 1.250,00</strong>
+                  </div>
+                  <div class="dashboard-item">
+                    <span>Dívidas Pendentes</span>
+                    <strong>R$ 450,00</strong>
+                  </div>
+                  <div class="dashboard-item">
+                    <span>Participantes</span>
+                    <strong>4 pessoas</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre Section -->
+      <section class="sobre">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Quem Somos</h2>
+            <div class="heading-line"></div>
+          </div>
+          <div class="sobre-content">
+            <div class="sobre-text">
+              <p class="destaque-p">Nascemos da frustração com sistemas que mais atrapalham que ajudam</p>
+              <p>Na QG.Digital, desenvolvemos soluções realmente eficientes, completas e funcionais. Nosso propósito é criar tecnologia que transforme negócios de forma tangível e mensurável.</p>
+              <p>Nossa equipe combina experiência de mercado com conhecimento técnico avançado para entregar o que realmente importa: resultados.</p>
+              <div class="features-list">
+                <div class="feature">
+                  <div class="feature-icon">
+                    <i class="fas fa-rocket"></i>
+                  </div>
+                  <div class="feature-text">
+                    <h4>Agilidade</h4>
+                    <p>Implementação rápida e eficiente</p>
+                  </div>
+                </div>
+                <div class="feature">
+                  <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                  </div>
+                  <div class="feature-text">
+                    <h4>Segurança</h4>
+                    <p>Proteção de dados em primeiro lugar</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sobre-image">
+              <img src="fotoequipe.png" alt="Membros da equipe QG.Digital colaborando em um projeto">
+              <div class="experience-badge">
+                <span>+5</span>
+                <small>Anos de experiência</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Diferenciais Section -->
+      <section class="diferenciais">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Por Que Escolher a QG.Digital?</h2>
+            <div class="heading-line"></div>
+          </div>
+          <div class="diferenciais-grid">
+            <div class="diferencial">
+              <div class="diferencial-icon">
+                <i class="fas fa-gem"></i>
+              </div>
+              <h3>Sem Aluguéis</h3>
+              <p>Compre uma vez e seja dono permanente do software</p>
+            </div>
+            <div class="diferencial">
+              <div class="diferencial-icon">
+                <i class="fas fa-paint-brush"></i>
+              </div>
+              <h3>Personalização</h3>
+              <p>Adaptamos cada solução às suas necessidades específicas</p>
+            </div>
+            <div class="diferencial">
+              <div class="diferencial-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h3>Transparência</h3>
+              <p>Você entende exatamente como o sistema funciona</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ FINANCEIRO PRO PAGE ============ -->
+    <div id="financeiro-page" class="page">
+      <section class="hero-simple">
+        <div class="container">
+          <h2>Financeiro PRO</h2>
+          <p>Dividir contas nunca foi tão fácil</p>
+        </div>
+      </section>
+
+      <section class="financeiro-main">
+        <div class="container">
+          <div class="financeiro-intro">
+            <h3>A planilha inteligente que sua família (e seus amigos) sempre quis</h3>
+            <p>Chega de discussões e cálculos complicados no fim do mês. O Financeiro PRO foi criado para ser incrivelmente simples, mesmo para quem não entende de tecnologia.</p>
+          </div>
+
+          <div class="section-heading">
+            <h2>Perfeito para organizar a vida financeira de...</h2>
+            <div class="heading-line"></div>
+          </div>
+
+          <div class="usos-grid">
+            <div class="uso-card">
+              <div class="uso-icon">❤️</div>
+              <h3>Casais</h3>
+              <p>Unifiquem as despesas da casa de forma justa, com divisão proporcional ao salário.</p>
+            </div>
+            <div class="uso-card">
+              <div class="uso-icon">🏡</div>
+              <h3>Amigos e Repúblicas</h3>
+              <p>Acabem com a bagunça do aluguel e mercado. Saibam quem deve o quê em segundos.</p>
+            </div>
+            <div class="uso-card">
+              <div class="uso-icon">👨‍👩‍👧‍👦</div>
+              <h3>Famílias</h3>
+              <p>Controlem os gastos familiares e saibam exatamente para onde o dinheiro está indo.</p>
+            </div>
+          </div>
+
+          <div class="section-heading">
+            <h2>Menos estresse, mais transparência</h2>
+            <div class="heading-line"></div>
+          </div>
+
+          <div class="beneficios-grid">
+            <div class="beneficio">
+              <div class="beneficio-icon">📊</div>
+              <h3>Visão Clara e Organizada</h3>
+              <p>Um dashboard intuitivo mostra o total de despesas, dívidas pendentes e metas, tudo em um só lugar.</p>
+            </div>
+            <div class="beneficio">
+              <div class="beneficio-icon">✅</div>
+              <h3>Chega de Discussões</h3>
+              <p>O sistema calcula tudo de forma automática e imparcial. Os números não mentem, acabando com os "achismos".</p>
+            </div>
+            <div class="beneficio">
+              <div class="beneficio-icon">🚀</div>
+              <h3>Lançamentos em Segundos</h3>
+              <p>Registrar uma despesa é mais rápido do que anotar no papel. Informe quem pagou, o valor e quem divide. Pronto!</p>
+            </div>
+          </div>
+
+          <div class="section-heading">
+            <h2>A simplicidade em 3 passos</h2>
+            <div class="heading-line"></div>
+          </div>
+
+          <div class="passos-grid">
+            <div class="passo">
+              <div class="passo-numero">1</div>
+              <h3>Cadastre</h3>
+              <p>Adicione os nomes das pessoas que vão dividir as contas.</p>
+            </div>
+            <div class="passo">
+              <div class="passo-numero">2</div>
+              <h3>Lance</h3>
+              <p>Registre quem pagou cada despesa e o valor total.</p>
+            </div>
+            <div class="passo">
+              <div class="passo-numero">3</div>
+              <h3>Resolva</h3>
+              <p>O sistema mostra o valor exato que cada um deve pagar e para quem.</p>
+            </div>
+          </div>
+
+          <div class="cta-section">
+            <h3>Pronto para organizar suas finanças?</h3>
+            <p>Diga adeus à confusão. Adquira sua licença vitalícia do Financeiro PRO e tenha controle total sobre as contas compartilhadas.</p>
+            <div class="features-checklist">
+              <div class="check-item"><i class="fas fa-check"></i> Pessoas Ilimitadas no Grupo</div>
+              <div class="check-item"><i class="fas fa-check"></i> Lançamento de Despesas Ilimitado</div>
+              <div class="check-item"><i class="fas fa-check"></i> Divisão Proporcional ao Salário</div>
+              <div class="check-item"><i class="fas fa-check"></i> Suporte Prioritário via WhatsApp</div>
+            </div>
+            <a href="https://qg-digital.github.io/Financeiro-PRO" class="btn btn-primary btn-large" target="_blank">
+              <i class="fas fa-eye"></i> Versão de Demonstração
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-financeiro">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Dúvidas Frequentes</h2>
+            <div class="heading-line"></div>
+          </div>
+          <div class="faq-items">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Preciso saber usar Excel ou ser bom com tecnologia?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Não! O Financeiro PRO foi desenvolvido para ser intuitivo e fácil de usar, mesmo para quem não tem experiência com tecnologia. A interface é simples e todos os processos são diretos.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Meus dados ficam seguros?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Sim! Utilizamos os mais altos padrões de segurança e criptografia para proteger seus dados financeiros. Sua privacidade é nossa prioridade.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Como funciona o suporte se eu precisar de ajuda?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Oferecemos suporte prioritário via WhatsApp para todos os usuários do Financeiro PRO. Nossa equipe está pronta para ajudar com qualquer dúvida ou problema.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ SERVIÇOS PAGE ============ -->
+    <div id="servicos-page" class="page">
+      <section class="hero-simple">
+        <div class="container">
+          <h2>Nossos Serviços</h2>
+          <p>Soluções completas para transformar seu negócio</p>
+        </div>
+      </section>
+    
+      <section class="servicos-main">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Conheça Nossas Soluções</h2>
+            <div class="heading-line"></div>
+          </div>
+    
+          <div class="servicos-grid">
+    
+            <!-- Card 1: Financeiro PRO -->
+            <div class="servico-card">
+              <div class="servico-icon">
+                <i class="fas fa-calculator"></i>
+              </div>
+              <h3>Financeiro PRO</h3>
+              <p>A planilha inteligente para dividir contas de forma justa e transparente. Perfeito para casais, amigos, repúblicas e famílias.</p>
+              <a href="https://wa.me/5543996349824" target="_blank" class="btn btn-outline">Saber Mais</a>
+            </div>
+    
+            <!-- Card 2: Pesquisador de Lojas -->
+            <div class="servico-card">
+              <div class="servico-icon">
+                <i class="fas fa-map-marked-alt"></i>
+              </div>
+              <h3>Pesquisador de Lojas</h3>
+              <p>Robô inteligente que varre o Brasil inteiro em busca de estabelecimentos. Encontre oportunidades de negócio automaticamente.</p>
+              <a href="https://wa.me/5543996349824" target="_blank" class="btn btn-outline">Saber Mais</a>
+            </div>
+    
+            <!-- Card 3: Gerador de Lista de Empresas (Atualizado) -->
+            <div class="servico-card">
+              <div class="servico-icon">
+                <i class="fas fa-download"></i>
+              </div>
+              <h3>Gerador de Lista de Empresas</h3>
+              <p>Encontre milhares de potenciais clientes em minutos. Nosso software extrai CNPJs direto da Receita Federal para sua prospecção.</p>
+              <a href="https://wa.me/5543996349824" target="_blank" class="btn btn-outline">Saber Mais</a>
+            </div>
+    
+            <!-- Card 4: Monitoramento via Telegram -->
+            <div class="servico-card">
+              <div class="servico-icon">
+                <i class="fab fa-telegram-plane"></i>
+              </div>
+              <h3>Monitoramento via Telegram</h3>
+              <p>Sistema de notificações inteligente que integra ao Telegram. Receba alertas em tempo real sobre seus processos.</p>
+              <a href="https://wa.me/5543996349824" target="_blank" class="btn btn-outline">Saber Mais</a>
+            </div>
+    
+            <!-- Card 5: Desenvolvimento Customizado -->
+            <div class="servico-card">
+              <div class="servico-icon">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <h3>Desenvolvimento Customizado</h3>
+              <p>Soluções personalizadas desenvolvidas especificamente para as necessidades do seu negócio.</p>
+              <a href="https://wa.me/5543996349824" target="_blank" class="btn btn-outline">Saber Mais</a>
+            </div>
+    
+            <!-- Card 6: Apoio Amigo (Atualizado) -->
+            <div class="servico-card">
+              <div class="servico-icon">
+                <i class="fas fa-hands-helping"></i>
+              </div>
+              <h3>Apoio Amigo</h3>
+              <p>A tecnologia parece difícil? Nós ajudamos! Oferecemos um suporte humano e paciente, pensado para quem precisa de ajuda com calma.</p>
+              <a href="https://wa.me/5543996349824" target="_blank" class="btn btn-outline">Pedir Ajuda Agora</a>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+    
+      <section class="cta-servicos">
+        <div class="container">
+          <h2>Não encontrou o que procura?</h2>
+          <p>Desenvolvemos soluções customizadas para seus desafios específicos.</p>
+          <a href="https://wa.me/5543996349824" target="_blank" class="btn btn-primary">Fale Conosco</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ EMPRESA PAGE ============ -->
+    <div id="empresa-page" class="page">
+      <section class="hero-simple">
+        <div class="container">
+          <h2>Sobre a QG.Digital</h2>
+          <p>Transformando ideias em soluções tecnológicas</p>
+        </div>
+      </section>
+
+      <section class="empresa-main">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Nossa História</h2>
+            <div class="heading-line"></div>
+          </div>
+
+          <div class="historia-content">
+            <p>A QG.Digital nasceu da frustração com sistemas que mais atrapalham que ajudam. Nossos fundadores, profissionais experientes em tecnologia e negócios, decidiram criar soluções que realmente funcionassem.</p>
+            <p>Desde o início, nossa missão foi clara: desenvolver software inteligente, com preço justo e resultado real. Não queremos ser apenas mais uma empresa de tecnologia. Queremos ser parceiros de nossos clientes no sucesso.</p>
+          </div>
+
+          <div class="section-heading">
+            <h2>Nossa Missão</h2>
+            <div class="heading-line"></div>
+          </div>
+
+          <div class="missao-grid">
+            <div class="missao-card">
+              <h3>Missão</h3>
+              <p>Criar soluções tecnológicas que transformem negócios de forma tangível e mensurável, simplificando processos complexos.</p>
+            </div>
+            <div class="missao-card">
+              <h3>Visão</h3>
+              <p>Ser referência em soluções de software inteligente, reconhecida pela qualidade, inovação e compromisso com o sucesso dos clientes.</p>
+            </div>
+            <div class="missao-card">
+              <h3>Valores</h3>
+              <p>Transparência, inovação, qualidade, compromisso e excelência no atendimento. Esses são os pilares que guiam nossas ações.</p>
+            </div>
+          </div>
+
+          <div class="section-heading">
+            <h2>Nossa Equipe</h2>
+            <div class="heading-line"></div>
+          </div>
+
+          <div class="equipe-content">
+            <p>Somos um time de profissionais apaixonados por tecnologia e resultados. Cada membro da equipe traz experiência, dedicação e um compromisso genuíno com a excelência.</p>
+            <div class="equipe-stats">
+              <div class="stat">
+                <strong>+5</strong>
+                <span>Anos de Experiência</span>
+              </div>
+              <div class="stat">
+                <strong>95+</strong>
+                <span>Projetos Entregues</span>
+              </div>
+              <div class="stat">
+                <strong>87+</strong>
+                <span>Clientes Satisfeitos</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-heading">
+            <h2>Contato</h2>
+            <div class="heading-line"></div>
+          </div>
+
+          <div class="contato-info">
+            <div class="contato-item">
+              <i class="fab fa-whatsapp"></i>
+              <div>
+                <h4>WhatsApp</h4>
+                <p><a href="https://wa.me/5543996349824" target="_blank">(43) 99634-9824</a></p>
+              </div>
+            </div>
+            <div class="contato-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p><a href="mailto:atendimento.qgdigital@gmail.com.br">atendimento.qgdigital@gmail.com.br</a></p>
+              </div>
+            </div>
+            <div class="contato-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Localização</h4>
+                <p>Londrina, Paraná - Brasil</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ FAQ PAGE ============ -->
+    <div id="faq-page" class="page">
+      <section class="hero-simple">
+        <div class="container">
+          <h2>Perguntas Frequentes</h2>
+          <p>Encontre respostas para suas dúvidas</p>
+        </div>
+      </section>
+
+      <section class="faq-main">
+        <div class="container">
+          <div class="faq-items">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Como funciona o Financeiro PRO?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>O Financeiro PRO é uma sistema inteligente que permite dividir despesas de forma justa. Você cadastra os participantes, lança as despesas e o sistema calcula automaticamente quem deve o quê. É simples, rápido e transparente.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Qual é o valor do Financeiro PRO?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>O Financeiro PRO é uma licença anual com preço único, pagou aquele valor, seja promocional ou em cupom, ele sera o mesmo a cada renovação. Entre em contato via WhatsApp para conhecer.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Posso usar o Financeiro PRO em grupo?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Sim! O Financeiro PRO suporta pessoas ilimitadas no grupo. Perfeito para casais, amigos, repúblicas e famílias. Todos podem acessar e atualizar as despesas em tempo real.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Como recebo suporte?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Oferecemos suporte prioritário via WhatsApp para todos os usuários. Nossa equipe está disponível para responder dúvidas e resolver problemas rapidamente.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Meus dados estão seguros?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Sim! Utilizamos os mais altos padrões de segurança e criptografia para proteger seus dados e o melhor, seu dados ficam em sua maquina, mesmo sem acesso a internet. Sua privacidade e segurança são nossas prioridades.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Vocês desenvolvem soluções customizadas?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Sim! Desenvolvemos soluções personalizadas para atender às necessidades específicas do seu negócio. Entre em contato para discutir seu projeto.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Como posso me tornar um afiliado?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Temos um programa de afiliados com comissão de 20% em cada venda. Visite a página "Seja Afiliado" para se cadastrar e começar a ganhar comissões apenas por divulgar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ TRABALHE CONOSCO PAGE ============ -->
+    <div id="trabalhe-conosco-page" class="page">
+      <section class="hero-simple">
+        <div class="container">
+          <h2>Trabalhe Conosco</h2>
+          <p>Faça parte da equipe QG.Digital</p>
+        </div>
+      </section>
+
+      <section class="trabalhe-main">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Oportunidades de Carreira</h2>
+            <div class="heading-line"></div>
+          </div>
+
+          <div class="trabalhe-intro">
+            <p>Na QG.Digital, buscamos profissionais apaixonados por tecnologia e inovação. Se você quer fazer parte de um time que cria soluções reais e impactantes, você está no lugar certo.</p>
+          </div>
+
+          <div class="trabalhe-content">
+            <h3>Por que trabalhar conosco?</h3>
+            <ul class="beneficios-trabalho">
+              <li><i class="fas fa-check"></i> Ambiente colaborativo e inovador</li>
+              <li><i class="fas fa-check"></i> Oportunidades de crescimento profissional</li>
+              <li><i class="fas fa-check"></i> Projetos desafiadores e impactantes</li>
+              <li><i class="fas fa-check"></i> Equipe experiente e dedicada</li>
+              <li><i class="fas fa-check"></i> Flexibilidade e autonomia</li>
+              <li><i class="fas fa-check"></i> Benefícios competitivos</li>
+            </ul>
+
+            <h3>Posições Abertas</h3>
+            <div class="posicoes-grid">
+              <div class="posicao-card">
+                <h4>Desenvolvedor Full Stack</h4>
+                <p>Buscamos um desenvolvedor experiente em tecnologias modernas para trabalhar em projetos inovadores.</p>
+                <a href="#trabalheForm" class="btn btn-outline">Candidatar</a>
+              </div>
+              <div class="posicao-card">
+                <h4>Designer UX/UI</h4>
+                <p>Procuramos um designer criativo para criar interfaces incríveis e experiências memoráveis.</p>
+                <a href="#trabalheForm" class="btn btn-outline">Candidatar</a>
+              </div>
+              <div class="posicao-card">
+                <h4>Especialista em Marketing</h4>
+                <p>Queremos um profissional de marketing para ajudar a crescer nossa presença no mercado.</p>
+                <a href="#trabalheForm" class="btn btn-outline">Candidatar</a>
+              </div>
+            </div>
+
+            <h3>Envie seu Currículo</h3>
+            <form class="trabalhe-form" id="trabalheForm">
+              <div class="form-group">
+                <label for="trabalheNome">Nome Completo</label>
+                <input type="text" id="trabalheNome" name="nome" required>
+              </div>
+              <div class="form-group">
+                <label for="trabalheEmail">Email</label>
+                <input type="email" id="trabalheEmail" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="trabalhePhone">Telefone</label>
+                <input type="tel" id="trabalhePhone" name="phone" required>
+              </div>
+              <div class="form-group">
+                <label for="trabalhePosition">Posição de Interesse</label>
+                <select id="trabalhePosition" name="position" required>
+                  <option value="">Selecione uma posição</option>
+                  <option value="desenvolvedor">Desenvolvedor Full Stack</option>
+                  <option value="designer">Designer UX/UI</option>
+                  <option value="marketing">Especialista em Marketing</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="trabalheMessage">Mensagem</label>
+                <textarea id="trabalheMessage" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar Candidatura</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ AFILIADOS PAGE ============ -->
+    <div id="afiliados-page" class="page">
+      <section class="hero-simple">
+        <div class="container">
+          <h2>Seja um Divulgador Parceiro</h2>
+          <p>Ganhe comissão divulgando nossos produtos</p>
+        </div>
+      </section>
+
+      <section class="afiliados-main">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Programa de Afiliados QG.Digital</h2>
+            <div class="heading-line"></div>
+          </div>
+
+          <div class="afiliados-intro">
+            <p>Quer ganhar dinheiro divulgando os produtos da QG.Digital? Nosso programa de afiliados oferece uma oportunidade fantástica para você monetizar sua influência e rede de contatos.</p>
+          </div>
+
+          <div class="afiliados-content">
+            <div class="comissao-destaque">
+              <div class="comissao-card">
+                <div class="comissao-numero">20%</div>
+                <p>de comissão em cada venda</p>
+              </div>
+              <div class="comissao-info">
+                <p>Você recebe <strong>20% de comissão</strong> em cada venda realizada através do seu link de afiliado. Sem limite de ganhos!</p>
+              </div>
+            </div>
+
+            <div class="section-heading">
+              <h2>Como Funciona</h2>
+              <div class="heading-line"></div>
+            </div>
+
+            <div class="como-funciona-grid">
+              <div class="passo">
+                <div class="passo-numero">1</div>
+                <h3>Cadastre-se</h3>
+                <p>Preencha o formulário de cadastro como afiliado da QG.Digital.</p>
+              </div>
+              <div class="passo">
+                <div class="passo-numero">2</div>
+                <h3>Receba seu Link</h3>
+                <p>Você receberá um link único de afiliado para compartilhar.</p>
+              </div>
+              <div class="passo">
+                <div class="passo-numero">3</div>
+                <h3>Divulgue</h3>
+                <p>Compartilhe o link em suas redes sociais, blog, email ou qualquer outro canal.</p>
+              </div>
+              <div class="passo">
+                <div class="passo-numero">4</div>
+                <h3>Ganhe Comissão</h3>
+                <p>Receba 20% de comissão em cada venda realizada através do seu link.</p>
+              </div>
+            </div>
+
+            <div class="section-heading">
+              <h2>Benefícios do Programa</h2>
+              <div class="heading-line"></div>
+            </div>
+
+            <div class="beneficios-afiliados">
+              <div class="beneficio-item">
+                <i class="fas fa-percent"></i>
+                <h3>Comissão Competitiva</h3>
+                <p>20% de comissão em cada venda. Uma das maiores do mercado!</p>
+              </div>
+              <div class="beneficio-item">
+                <i class="fas fa-chart-line"></i>
+                <h3>Painel de Controle</h3>
+                <p>Acompanhe suas vendas e ganhos em tempo real.</p>
+              </div>
+              <div class="beneficio-item">
+                <i class="fas fa-users"></i>
+                <h3>Suporte Dedicado</h3>
+                <p>Nossa equipe está pronta para ajudar você a ter sucesso.</p>
+              </div>
+              <div class="beneficio-item">
+                <i class="fas fa-gift"></i>
+                <h3>Materiais de Marketing</h3>
+                <p>Receba banners, textos e outros materiais para facilitar a divulgação.</p>
+              </div>
+              <div class="beneficio-item">
+                <i class="fas fa-rocket"></i>
+                <h3>Sem Limite</h3>
+                <p>Ganhe quantas comissões quiser. Sem limite de ganhos!</p>
+              </div>
+              <div class="beneficio-item">
+                <i class="fas fa-handshake"></i>
+                <h3>Parceria Verdadeira</h3>
+                <p>Somos parceiros no seu sucesso. Queremos que você ganhe muito!</p>
+              </div>
+            </div>
+
+            <div class="section-heading">
+              <h2>Cadastre-se como Afiliado</h2>
+              <div class="heading-line"></div>
+            </div>
+
+            <form class="afiliados-form" id="afiliadosForm">
+              <div class="form-group">
+                <label for="afiliadoNome">Nome Completo</label>
+                <input type="text" id="afiliadoNome" name="nome" required>
+              </div>
+              <div class="form-group">
+                <label for="afiliadoEmail">Email</label>
+                <input type="email" id="afiliadoEmail" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="afiliadoWhatsapp">WhatsApp</label>
+                <input type="tel" id="afiliadoWhatsapp" name="whatsapp" required>
+              </div>
+              <div class="form-group">
+                <label for="afiliadoCanal">Principal Canal de Divulgação</label>
+                <select id="afiliadoCanal" name="canal" required>
+                  <option value="">Selecione um canal</option>
+                  <option value="instagram">Instagram</option>
+                  <option value="facebook">Facebook</option>
+                  <option value="youtube">YouTube</option>
+                  <option value="tiktok">TikTok</option>
+                  <option value="blog">Blog</option>
+                  <option value="email">Email</option>
+                  <option value="whatsapp">WhatsApp</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="afiliadoSeguidores">Quantos seguidores/contatos você tem?</label>
+                <input type="text" id="afiliadoSeguidores" name="seguidores" placeholder="Ex: 5000">
+              </div>
+              <div class="form-group">
+                <label for="afiliadoMensagem">Por que você quer ser afiliado?</label>
+                <textarea id="afiliadoMensagem" name="mensagem" rows="4" required></textarea>
+              </div>
+              <div class="form-group checkbox">
+                <input type="checkbox" id="afiliadoTermos" name="termos" required>
+                <label for="afiliadoTermos">Concordo com os termos e condições do programa de afiliados</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Cadastrar como Afiliado</button>
+            </form>
+
+            <div class="section-heading">
+              <h2>Dúvidas Frequentes</h2>
+              <div class="heading-line"></div>
+            </div>
+
+            <div class="faq-items">
+              <div class="faq-item">
+                <button class="faq-question">
+                  <span>Quanto tempo leva para receber minha primeira comissão?</span>
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                  <p>As comissões são processadas mensalmente. Você receberá sua primeira comissão no mês seguinte às vendas realizadas.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  <span>Como recebo minha comissão?</span>
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                  <p>As comissões são transferidas via Pix ou outro método de sua preferência.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  <span>Há limite de comissão que posso ganhar?</span>
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                  <p>Não! Você pode ganhar quantas comissões quiser. Quanto mais vender, mais ganha. Sem limite!</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  <span>Preciso de experiência em vendas?</span>
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                  <p>Não é necessário. Se você tem uma rede de contatos ou seguidores, pode ser afiliado. Fornecemos todo o suporte e materiais necessários.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  <span>Posso divulgar em qualquer lugar?</span>
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                  <p>Sim! Você pode divulgar em redes sociais, blog, email, WhatsApp ou qualquer outro canal legal. Quanto mais criativo, melhor!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ PÁGINA DADOS ABERTOS (VERSÃO TRANSPARÊNCIA RADICAL) ============ -->
+    <div id="dados-abertos-page" class="page">
+        <section class="hero-simple">
+            <div class="container">
+                <h2>Dados Abertos QG.Digital</h2>
+                <p>Transparência radical. Acreditamos que a confiança é construída com clareza.</p>
+            </div>
+        </section>
+    
+        <section class="dados-abertos-main">
+            <div class="container">
+                <!-- 1. FILTROS DE ANÁLISE -->
+                <div class="filtros-container">
+                    <div class="filtro-item"><label for="filtro-mes">Mês:</label><select id="filtro-mes"><option value="todos">Todos</option></select></div>
+                    <div class="filtro-item"><label for="filtro-ano">Ano:</label><select id="filtro-ano"><option value="todos">Todos</option></select></div>
+                    <div class="filtro-item"><label for="filtro-vendedor">Vendedor:</label><select id="filtro-vendedor"><option value="todos">Todos</option></select></div>
+                    <div class="filtro-item"><label for="filtro-software">Software:</label><select id="filtro-software"><option value="todos">Todos</option></select></div>
+                    <div class="filtro-item">
+                        <label for="filtro-bonus-input">Cód. Bônus:</label>
+                        <input type="text" id="filtro-bonus-input" placeholder="Digite para filtrar...">
+                    </div>
+                    <button id="btn-limpar-filtros" class="btn btn-secondary"><i class="fas fa-times"></i> Limpar</button>
+                    <button id="btn-exportar-csv" class="btn btn-outline"><i class="fas fa-download"></i> Exportar Vendas</button>
+                </div>
+    
+                <!-- 2. DEMONSTRATIVO FINANCEIRO -->
+                <div class="section-heading">
+                    <h2>Demonstrativo Financeiro do Período</h2>
+                    <div class="heading-line"></div>
+                </div>
+                <div class="tabela-container financeiro">
+                    <table id="tabela-financeiro">
+                        <tbody>
+                            <tr>
+                                <td>(+) Faturamento Bruto Total</td>
+                                <td id="d-faturamento-bruto">R$ 0,00</td>
+                            </tr>
+                            <tr>
+                                <td>(-) Comissão Bônus (20%)</td>
+                                <td id="d-comissao-bonus" class="despesa">R$ 0,00</td>
+                            </tr>
+                            <tr>
+                                <td>(-) Comissão Vendedor (30%)</td>
+                                <td id="d-comissao-vendedor" class="despesa">R$ 0,00</td>
+                            </tr>
+                            <tr>
+                                <td>(-) Impostos (23% sobre o Bruto)</td>
+                                <td id="d-impostos" class="despesa">R$ 0,00</td>
+                            </tr>
+                            <tr class="resultado">
+                                <td>(=) Lucro Líquido do Período</td>
+                                <td id="d-lucro-liquido" class="lucro">R$ 0,00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+                <!-- 3. EXTRATO DA EMPRESA (DESTINAÇÃO DO LUCRO) -->
+                <div class="section-heading">
+                    <h2>Extrato da Empresa: Para Onde Vai o Lucro</h2>
+                    <div class="heading-line"></div>
+                </div>
+                <div class="cards-totais-grid">
+                     <div class="card-total card-lucro"><h4>Caixa Atual</h4><p id="caixa-atual">R$ 0,00</p></div>
+                     <div class="card-total"><h4>Meta de Caixa</h4><p>R$ 100 Mi</p></div>
+                     <div class="card-total card-despesa"><h4>Total Gasto</h4><p id="total-gasto">R$ 0,00</p></div>
+                </div>
+                <div class="tabela-container centralizada">
+                    <div class="tabela-wrapper">
+                        <table id="tabela-gastos">
+                            <thead>
+                                <tr>
+                                    <th>Data</th>
+                                    <th>Descrição</th>
+                                    <th>Categoria</th>
+                                    <th>Valor</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+    
+                <!-- 4. GRÁFICOS DE PERFORMANCE DE VENDAS -->
+                <div class="section-heading">
+                    <h2>Performance de Vendas</h2>
+                    <div class="heading-line"></div>
+                </div>
+                <div class="graficos-grid-full">
+                    <div class="grafico-container">
+                        <h3>Comissões por Cód. Bônus</h3>
+                        <div class="grafico-wrapper"><canvas id="grafico-bonus"></canvas></div>
+                    </div>
+                    <div class="grafico-container">
+                        <h3>Faturamento por Vendedor</h3>
+                        <div class="grafico-wrapper"><canvas id="grafico-vendedor"></canvas></div>
+                    </div>
+                </div>
+    
+                <!-- 5. TABELA DE VENDAS DETALHADAS -->
+                <div class="section-heading">
+                    <h2>Dados Brutos das Vendas</h2>
+                    <div class="heading-line"></div>
+                </div>
+                <div class="tabela-container">
+                    <div class="tabela-wrapper">
+                        <table id="tabela-vendas">
+                            <thead>
+                                <tr>
+                                    <th>Vendedor</th>
+                                    <th>Cód. Bônus</th>
+                                    <th>Software</th>
+                                    <th>Valor Venda</th>
+                                    <th>Com. Bônus (20%)</th>
+                                    <th>Com. Vendedor (30%)</th>
+                                    <th>Data</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-col">
+            <img src="logobranca.png" alt="Logo QG.Digital" style="max-height: 40px; margin-bottom: 16px;">
+            <p>Software inteligente. Preço justo. Resultado real.</p>
+            <div class="social-icons">
+              <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/quebra_galho.digital/" class="social-icon" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Links Rápidos</h3>
+            <ul class="footer-links">
+              <li><a href="#" data-page="home">Home</a></li>
+              <li><a href="#" data-page="financeiro">Financeiro PRO</a></li>
+              <li><a href="#" data-page="servicos">Serviços</a></li>
+              <li><a href="#" data-page="empresa">Empresa</a></li>
+              <li><a href="#" data-page="faq">FAQ</a></li>
+              <li><a href="#" data-page="afiliados">Seja Afiliado</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Contato</h3>
+            <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5543996349824" target="_blank">(43) 99634-9824</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:atendimento.qgdigital@gmail.com.br">atendimento.qgdigital@gmail.com.br</a></p>
+            <p><i class="fas fa-map-marker-alt"></i> Londrina, PR</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 QG.Digital - Todos os direitos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão Flutuante do WhatsApp -->
+  <a href="https://wa.me/5543996349824" class="whatsapp-float" target="_blank" title="Fale Conosco no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" title="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

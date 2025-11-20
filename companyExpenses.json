@@ -1,0 +1,14 @@
+[
+    {
+        "data": "2025-11-15",
+        "descricao": "Supermercado (Café e lanches)",
+        "categoria": "Despesas Operacionais",
+        "valor": 150.75
+    },
+    {
+        "data": "2025-11-20",
+        "descricao": "Pagamento de anúncio no Instagram",
+        "categoria": "Marketing",
+        "valor": 500.00
+    }
+]

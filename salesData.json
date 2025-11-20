@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "vendedor": "Isadora",
+        "software": "Financeiro PRO",
+        "codigo_bonus": "Isadora_GA25W",
+        "valor_final": 489.0,
+        "data_pedido": "2025-10-21 18:57:44"
+    },
+    {
+        "id": 2,
+        "vendedor": "Vinicius",
+        "software": "Financeiro PRO",
+        "codigo_bonus": "Vinicius_GQLIV",
+        "valor_final": 489.0,
+        "data_pedido": "2025-10-22 22:26:44"
+    },
+    {
+        "id": 3,
+        "vendedor": "Matheus",
+        "software": "Pesquisador de Lojas",
+        "codigo_bonus": "Matheus_0NSNE",
+        "valor_final": 750.0,
+        "data_pedido": "2025-11-11 03:35:44"
+    }
+]
