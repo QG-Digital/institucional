@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>QG.Digital | Automação Inteligente com WhatsApp</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="QG.Digital — empresa de automação inteligente. QG.Cotações, scripts de pesquisa, mineração de dados, gerador EAN e consultoria de automação. Uma pessoa, vários robôs.">
+
+  <meta property="og:title" content="QG.Digital | Automação Inteligente com WhatsApp">
+  <meta property="og:description" content="Cotações de frete via WhatsApp, automações, scripts e consultoria. Conheça o QG.Cotações e muito mais.">
+  <meta property="og:url" content="https://qg-digital.github.io/institucional/">
+  <meta property="og:type" content="website">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "QG.Digital",
+    "url": "https://qg-digital.github.io/institucional/",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+55-43-99634-9824",
+      "contactType": "customer service",
+      "areaServed": "BR",
+      "availableLanguage": "Portuguese"
+    },
+    "sameAs": ["https://www.instagram.com/quebra_galho.digital/"]
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">QG<span>.</span>Digital</div>
+      <div class="loader-dots">
+        <div class="loader-dot"></div>
+        <div class="loader-dot"></div>
+        <div class="loader-dot"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#" class="logo" onclick="showPage('home')">
+        QG<span>.</span>Digital
+        <small class="logo-tagline">Automação Inteligente</small>
+      </a>
+      <nav class="nav">
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#" onclick="showPage('home')" class="nav-link active" data-page="home">Home</a></li>
+          <li><a href="#" onclick="showPage('cotacoes')" class="nav-link" data-page="cotacoes">QG.Cotações</a></li>
+          <li><a href="#" onclick="showPage('servicos')" class="nav-link" data-page="servicos">Serviços</a></li>
+          <li><a href="#" onclick="showPage('consultoria')" class="nav-link" data-page="consultoria">Consultoria</a></li>
+          <li><a href="#" onclick="showPage('sobre')" class="nav-link" data-page="sobre">Sobre</a></li>
+          <li><a href="dashboard_v2.html" class="nav-link"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+          <li><a href="https://wa.me/5543996349824?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20QG.Digital" target="_blank" class="nav-link nav-cta"><i class="fab fa-whatsapp"></i> Falar Agora</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HOME PAGE ============ -->
+  <div id="home-page" class="page active">
+
+    <!-- Hero -->
+    <section class="hero-home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fab fa-whatsapp"></i>
+            Tudo via WhatsApp — simples assim
+          </div>
+          <h1>
+            Automação real.<br>
+            Resultado <span class="highlight">imediato.</span><br>
+            Via WhatsApp.
+          </h1>
+          <p class="hero-sub">
+            Uma empresa de uma pessoa só, trabalhando em conjunto a vários robôs. Do QG.Cotações às automações customizadas — tecnologia que resolve de verdade, sem complicação.
+          </p>
+          <div class="hero-ctas">
+            <a href="https://wa.me/5543996349824?text=Quero%20conhecer%20o%20QG.Cota%C3%A7%C3%B5es!" target="_blank" class="btn btn-wpp btn-lg">
+              <i class="fab fa-whatsapp"></i> Testar QG.Cotações
+            </a>
+            <a href="#" onclick="showPage('servicos')" class="btn btn-secondary btn-lg">
+              Ver todos os serviços
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <!-- WhatsApp Flow Mockup -->
+          <div class="wpp-flow">
+            <div class="wpp-header">
+              <div class="wpp-avatar"><i class="fab fa-whatsapp"></i></div>
+              <div class="wpp-header-info">
+                <strong>QG.Cotações</strong>
+                <small>Sistema de Cotação de Frete</small>
+              </div>
+            </div>
+            <div class="wpp-messages">
+              <div class="wpp-msg received">
+                Preciso cotar frete de Londrina/PR para São Paulo/SP, 50kg, caixa 60x40x30cm.
+                <span class="wpp-time">09:14</span>
+              </div>
+              <div class="wpp-msg bot">
+                ✅ Cotação recebida! Disparando para as transportadoras parceiras agora...
+                <span class="wpp-time">09:14</span>
+              </div>
+              <div class="wpp-msg bot">
+                ⏱️ Aguarde até 15 minutos. Você receberá as melhores opções diretamente aqui!
+                <span class="wpp-time">09:14</span>
+              </div>
+              <div class="wpp-typing">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Stats -->
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong>15min</strong>
+              <span>Tempo médio de retorno</span>
+            </div>
+            <div class="hero-stat">
+              <strong>100%</strong>
+              <span>Via WhatsApp</span>
+            </div>
+            <div class="hero-stat">
+              <strong>N+</strong>
+              <span>Transportadoras</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Destaque QG.Cotações -->
+    <section class="destaque-cotacoes">
+      <div class="container">
+        <div class="cotacoes-grid">
+          <div class="cotacoes-text fade-up">
+            <div class="badge-produto">
+              <i class="fab fa-whatsapp"></i> Produto Principal
+            </div>
+            <h2>
+              <span>QG.Cotações</span> —<br>
+              Frete cotado pelo<br>WhatsApp
+            </h2>
+            <p class="lead">
+              O cliente pede a cotação via WhatsApp. O sistema dispara automaticamente para várias transportadoras. Em até 15 minutos, as melhores opções voltam direto para o cliente. Simples, prático e 100% no WhatsApp.
+            </p>
+            <ul class="cotacoes-features">
+              <li>
+                <div class="feat-icon"><i class="fas fa-check"></i></div>
+                <div class="feat-text">
+                  <strong>Cadastro pelo WhatsApp</strong>
+                  <span>Clientes e transportadoras se cadastram direto no chat, sem formulários externos</span>
+                </div>
+              </li>
+              <li>
+                <div class="feat-icon"><i class="fas fa-check"></i></div>
+                <div class="feat-text">
+                  <strong>Disparo automático para transportadoras</strong>
+                  <span>O sistema envia a solicitação para todas as transportadoras cadastradas simultaneamente</span>
+                </div>
+              </li>
+              <li>
+                <div class="feat-icon"><i class="fas fa-check"></i></div>
+                <div class="feat-text">
+                  <strong>Retorno em até 15 minutos</strong>
+                  <span>As respostas das transportadoras são consolidadas e enviadas de volta ao cliente</span>
+                </div>
+              </li>
+              <li>
+                <div class="feat-icon"><i class="fas fa-check"></i></div>
+                <div class="feat-text">
+                  <strong>Zero apps para instalar</strong>
+                  <span>Tudo acontece no WhatsApp que o cliente já usa no dia a dia</span>
+                </div>
+              </li>
+            </ul>
+            <a href="https://wa.me/5543996349824?text=Quero%20conhecer%20o%20QG.Cota%C3%A7%C3%B5es!" target="_blank" class="btn btn-wpp btn-lg">
+              <i class="fab fa-whatsapp"></i> Quero o QG.Cotações
+            </a>
+          </div>
+          <div class="cotacoes-flow fade-up">
+            <div class="flow-title">Como funciona o fluxo</div>
+            <div class="flow-steps">
+              <div class="flow-step">
+                <div class="flow-num cliente">1</div>
+                <div class="flow-info">
+                  <strong>Cliente envia a solicitação</strong>
+                  <span>Peso, dimensões, origem e destino via WhatsApp</span>
+                </div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-num sistema">2</div>
+                <div class="flow-info">
+                  <strong>Sistema processa e dispara</strong>
+                  <span>QG.Cotações envia para todas as transportadoras cadastradas</span>
+                </div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-num transp">3</div>
+                <div class="flow-info">
+                  <strong>Transportadoras respondem</strong>
+                  <span>Cada transportadora informa seu valor e prazo via WhatsApp</span>
+                </div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-num retorno">4</div>
+                <div class="flow-info">
+                  <strong>Cliente recebe as opções</strong>
+                  <span>Todas as cotações consolidadas em uma única mensagem</span>
+                </div>
+              </div>
+            </div>
+            <div class="flow-timer">
+              <i class="fas fa-clock"></i>
+              <div>
+                <strong>Tudo em até 15 minutos</strong>
+                <span>Do pedido ao retorno completo com todas as opções</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços Preview -->
+    <section class="servicos">
+      <div class="container">
+        <div class="section-heading fade-up">
+          <div class="section-label">Nossos Serviços</div>
+          <h2>Automação que resolve<br>de verdade</h2>
+          <p>Scripts, sistemas e automações desenvolvidos para economizar tempo e eliminar processos manuais chatos.</p>
+        </div>
+        <div class="servicos-grid">
+
+          <div class="servico-card fade-up">
+            <div class="servico-icon-wrap bg-green-soft"><i class="fab fa-whatsapp"></i></div>
+            <h3>Sistemas Customizados via WhatsApp</h3>
+            <p>Sistemas completos operados inteiramente pelo WhatsApp. Cadastros, consultas, fluxos automatizados — tudo sem sair do app.</p>
+            <span class="servico-tag tag-green"><i class="fas fa-circle" style="font-size:0.4rem"></i> WhatsApp</span>
+          </div>
+
+          <div class="servico-card fade-up">
+            <div class="servico-icon-wrap bg-orange-soft"><i class="fas fa-share-alt"></i></div>
+            <h3>Postador de Status & Posts Automáticos</h3>
+            <p>Postagem automática de status no Instagram e publicações no Facebook. Programe e esqueça — o robô posta por você.</p>
+            <span class="servico-tag tag-orange"><i class="fas fa-circle" style="font-size:0.4rem"></i> Instagram & Facebook</span>
+          </div>
+
+          <div class="servico-card fade-up">
+            <div class="servico-icon-wrap bg-blue-soft"><i class="fas fa-file-code"></i></div>
+            <h3>Criação de Páginas & Landing Pages</h3>
+            <p>Páginas e landing pages profissionais criadas via automação. Rápido, bonito e funcional — sem precisar de agência.</p>
+            <span class="servico-tag tag-blue"><i class="fas fa-circle" style="font-size:0.4rem"></i> Web</span>
+          </div>
+
+          <div class="servico-card fade-up">
+            <div class="servico-icon-wrap bg-teal-soft"><i class="fas fa-map-marked-alt"></i></div>
+            <h3>Pesquisa Brasil</h3>
+            <p>Script que pesquisa qualquer segmento em escala Brasil pelo Google Maps, filtrando por cidade, estado ou todo o território nacional.</p>
+            <span class="servico-tag tag-teal"><i class="fas fa-circle" style="font-size:0.4rem"></i> Script</span>
+          </div>
+
+          <div class="servico-card fade-up">
+            <div class="servico-icon-wrap bg-purple-soft"><i class="fas fa-database"></i></div>
+            <h3>Mineiro de Dados</h3>
+            <p>Filtragem avançada de CNPJs diretamente da base da Receita Federal. Encontre exatamente o público-alvo que você precisa.</p>
+            <span class="servico-tag tag-purple"><i class="fas fa-circle" style="font-size:0.4rem"></i> Dados</span>
+          </div>
+
+          <div class="servico-card fade-up">
+            <div class="servico-icon-wrap bg-red-soft"><i class="fas fa-barcode"></i></div>
+            <h3>Gerador de Códigos EAN</h3>
+            <p>Geração em lote de códigos EAN válidos para produtos. Ideal para e-commerces, distribuidoras e indústrias que precisam de agilidade.</p>
+            <span class="servico-tag tag-red"><i class="fas fa-circle" style="font-size:0.4rem"></i> Ferramenta</span>
+          </div>
+
+        </div>
+        <div class="text-center mt-32">
+          <a href="#" onclick="showPage('servicos')" class="btn btn-outline btn-lg">Ver todos os serviços</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Julia Section -->
+    <section class="julia-section">
+      <div class="container">
+        <div class="julia-grid">
+          <div class="julia-visual">
+            <div class="julia-card">
+              <div class="julia-avatar-row">
+                <div class="julia-avatar">🤖</div>
+                <div>
+                  <div class="julia-name">
+                    <strong>Julia</strong>
+                    <span>IA Avançada da QG.Digital</span>
+                  </div>
+                  <div class="julia-status">
+                    <div class="status-dot"></div>
+                    Online agora
+                  </div>
+                </div>
+              </div>
+              <div class="julia-skills">
+                <span class="julia-skill">Conversação Natural</span>
+                <span class="julia-skill">Automação de Tarefas</span>
+                <span class="julia-skill">WhatsApp</span>
+                <span class="julia-skill">Análise de Processos</span>
+                <span class="julia-skill">Integração de Sistemas</span>
+                <span class="julia-skill">Relatórios Automáticos</span>
+              </div>
+            </div>
+            <div class="solo-empresa">
+              <div class="solo-icon">👤</div>
+              <h4>Empresa de uma pessoa + vários robôs</h4>
+              <p>Uma operação enxuta e eficiente: um humano estratégico trabalhando em conjunto com múltiplas automações e IAs para entregar resultados que empresas inteiras não conseguem.</p>
+            </div>
+          </div>
+          <div class="julia-text">
+            <div class="section-label">Conheça a Julia</div>
+            <h2>A IA mais avançada<br>da <span>QG.Digital</span></h2>
+            <p>A Julia é a inteligência artificial mais avançada da QG.Digital, especializada em conversas naturais e automação de tarefas complexas. Ela opera 24/7, sem pausas, sem erros humanos.</p>
+            <p>Enquanto você dorme, a Julia está trabalhando: respondendo clientes, processando cotações, executando automações e gerando relatórios. Tudo de forma autônoma e inteligente.</p>
+            <div class="julia-capabilities">
+              <div class="julia-cap"><i class="fas fa-check-circle"></i> Atendimento 24/7</div>
+              <div class="julia-cap"><i class="fas fa-check-circle"></i> Processamento de cotações</div>
+              <div class="julia-cap"><i class="fas fa-check-circle"></i> Automação de fluxos</div>
+              <div class="julia-cap"><i class="fas fa-check-circle"></i> Integração com WhatsApp</div>
+              <div class="julia-cap"><i class="fas fa-check-circle"></i> Análise de dados</div>
+              <div class="julia-cap"><i class="fas fa-check-circle"></i> Relatórios automáticos</div>
+              <div class="julia-cap"><i class="fas fa-check-circle"></i> Aprendizado contínuo</div>
+              <div class="julia-cap"><i class="fas fa-check-circle"></i> Multi-tarefas simultâneas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultoria Preview -->
+    <section class="consultoria">
+      <div class="container">
+        <div class="consultoria-grid">
+          <div class="consultoria-text fade-up">
+            <div class="section-label">Consultoria Presencial</div>
+            <h2>Vou até a sua<br>empresa e <span>monto o plano</span></h2>
+            <p>Não é uma consultoria genérica. Vou pessoalmente até a sua empresa, converso com cada setor, entendo as dores reais e monto um relatório completo com tudo que pode ser automatizado.</p>
+            <p>O relatório inclui todas as automações possíveis, sistemas recomendados, linguagens utilizadas e o impacto estimado em redução de tempo dos vendedores e melhoria de processos.</p>
+            <div class="consultoria-etapas">
+              <div class="etapa">
+                <div class="etapa-num">1</div>
+                <div class="etapa-info">
+                  <strong>Visita presencial à empresa</strong>
+                  <span>Avaliação in loco de todos os setores e processos</span>
+                </div>
+              </div>
+              <div class="etapa">
+                <div class="etapa-num">2</div>
+                <div class="etapa-info">
+                  <strong>Conversas com a equipe</strong>
+                  <span>Entendimento das dores reais de cada colaborador</span>
+                </div>
+              </div>
+              <div class="etapa">
+                <div class="etapa-num">3</div>
+                <div class="etapa-info">
+                  <strong>Relatório completo de automações</strong>
+                  <span>Sistemas, linguagens, IA e impacto estimado por setor</span>
+                </div>
+              </div>
+              <div class="etapa">
+                <div class="etapa-num">4</div>
+                <div class="etapa-info">
+                  <strong>Implementação opcional</strong>
+                  <span>Desenvolvimento das automações identificadas</span>
+                </div>
+              </div>
+            </div>
+            <a href="https://wa.me/5543996349824?text=Quero%20agendar%20uma%20consultoria%20de%20automa%C3%A7%C3%A3o!" target="_blank" class="btn btn-primary btn-lg mt-24">
+              <i class="fas fa-calendar-check"></i> Agendar Consultoria
+            </a>
+          </div>
+          <div class="consultoria-visual fade-up">
+            <div class="relatorio-mockup">
+              <h4>📋 Relatório de Automação — Exemplo</h4>
+              <div class="relatorio-item">
+                <div class="rel-icon bg-orange-soft"><i class="fab fa-whatsapp"></i></div>
+                <div class="rel-info">
+                  <strong>Atendimento ao cliente</strong>
+                  <span>Chatbot WhatsApp com IA</span>
+                </div>
+                <span class="rel-badge tag-green">-80% tempo</span>
+              </div>
+              <div class="relatorio-item">
+                <div class="rel-icon bg-blue-soft"><i class="fas fa-file-invoice"></i></div>
+                <div class="rel-info">
+                  <strong>Emissão de orçamentos</strong>
+                  <span>Automação Python + WhatsApp</span>
+                </div>
+                <span class="rel-badge tag-green">-70% tempo</span>
+              </div>
+              <div class="relatorio-item">
+                <div class="rel-icon bg-purple-soft"><i class="fas fa-chart-bar"></i></div>
+                <div class="rel-info">
+                  <strong>Relatórios de vendas</strong>
+                  <span>Dashboard automático diário</span>
+                </div>
+                <span class="rel-badge tag-green">-90% tempo</span>
+              </div>
+              <div class="relatorio-item">
+                <div class="rel-icon bg-teal-soft"><i class="fas fa-truck"></i></div>
+                <div class="rel-info">
+                  <strong>Cotação de frete</strong>
+                  <span>QG.Cotações — 15min via WPP</span>
+                </div>
+                <span class="rel-badge tag-green">-95% tempo</span>
+              </div>
+              <div class="relatorio-item">
+                <div class="rel-icon bg-red-soft"><i class="fas fa-share-alt"></i></div>
+                <div class="rel-info">
+                  <strong>Marketing nas redes sociais</strong>
+                  <span>Postador automático Instagram/Facebook</span>
+                </div>
+                <span class="rel-badge tag-green">-85% tempo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <div class="container">
+        <div class="section-heading fade-up">
+          <div class="section-label">Dúvidas Frequentes</div>
+          <h2>Perguntas & Respostas</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Como funciona o QG.Cotações?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">O cliente envia a solicitação de cotação pelo WhatsApp informando peso, dimensões, origem e destino. O sistema dispara automaticamente para todas as transportadoras cadastradas. Em até 15 minutos, as respostas são consolidadas e enviadas de volta ao cliente. Todo o processo — incluindo cadastro — acontece pelo WhatsApp.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Preciso instalar algum aplicativo?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Não! Tudo funciona pelo WhatsApp que você já usa. Nenhum app adicional, nenhum login em plataformas externas. O cadastro, as cotações e o gerenciamento acontecem 100% pelo WhatsApp.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>O que é a Consultoria de Automação?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">É uma consultoria presencial onde vou até a sua empresa, avalio cada setor, converso com a equipe para entender as dores reais e monto um relatório completo com todas as automações possíveis. O relatório inclui sistemas recomendados, linguagens, uso de IA e impacto estimado em redução de tempo e melhoria de processos.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>O que é o Pesquisa Brasil?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">É um script que pesquisa qualquer segmento de negócio em escala nacional pelo Google Maps. Você define o que quer pesquisar e filtra por cidade, estado ou todo o Brasil. Ideal para prospecção de clientes, análise de mercado e geração de listas qualificadas.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Como funciona o Mineiro de Dados?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">O Mineiro de Dados filtra CNPJs diretamente da base da Receita Federal com critérios avançados: CNAE, porte, localização, situação cadastral e muito mais. Você recebe uma lista limpa e qualificada do exato público-alvo que precisa.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Quem é a Julia?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">A Julia é a IA mais avançada da QG.Digital, especializada em conversas naturais e automação de tarefas. Ela opera 24/7 e é responsável por processar cotações, responder clientes, executar automações e gerar relatórios de forma autônoma. É a principal "colaboradora" da empresa, trabalhando em conjunto com o fundador humano.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contato">
+      <div class="container">
+        <div class="contato-grid">
+          <div class="contato-info fade-up">
+            <div class="section-label">Fale Conosco</div>
+            <h2>Vamos conversar<br>sobre o seu projeto?</h2>
+            <p>A forma mais rápida de falar comigo é pelo WhatsApp. Respondo pessoalmente — ou a Julia responde por mim enquanto estou ocupado.</p>
+            <div class="contato-items">
+              <div class="contato-item">
+                <div class="contato-item-icon" style="background:rgba(37,211,102,0.1);color:var(--accent-dark)">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contato-item-info">
+                  <strong>WhatsApp (preferencial)</strong>
+                  <a href="https://wa.me/5543996349824" target="_blank">(43) 99634-9824</a>
+                </div>
+              </div>
+              <div class="contato-item">
+                <div class="contato-item-icon" style="background:rgba(250,135,0,0.1);color:var(--secondary-dark)">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contato-item-info">
+                  <strong>E-mail</strong>
+                  <a href="mailto:atendimento.qgdigital@gmail.com">atendimento.qgdigital@gmail.com</a>
+                </div>
+              </div>
+              <div class="contato-item">
+                <div class="contato-item-icon" style="background:rgba(13,27,62,0.08);color:var(--primary)">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contato-item-info">
+                  <strong>Localização</strong>
+                  <span>Londrina, Paraná — Brasil</span>
+                </div>
+              </div>
+              <div class="contato-item">
+                <div class="contato-item-icon" style="background:rgba(200,50,200,0.1);color:#a030a0">
+                  <i class="fab fa-instagram"></i>
+                </div>
+                <div class="contato-item-info">
+                  <strong>Instagram</strong>
+                  <a href="https://www.instagram.com/quebra_galho.digital/" target="_blank">@quebra_galho.digital</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contato-form-wrap fade-up">
+            <h3 style="color:var(--primary);font-size:1.2rem;font-weight:700;margin-bottom:24px;">Envie uma mensagem</h3>
+            <form id="contatoForm">
+              <div class="form-group">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" placeholder="Seu nome" required>
+              </div>
+              <div class="form-group">
+                <label for="whatsapp">WhatsApp</label>
+                <input type="tel" id="whatsapp" placeholder="(00) 00000-0000" required>
+              </div>
+              <div class="form-group">
+                <label for="interesse">Interesse</label>
+                <select id="interesse">
+                  <option value="">Selecione um serviço</option>
+                  <option>QG.Cotações</option>
+                  <option>Sistemas Customizados via WhatsApp</option>
+                  <option>Postador de Status/Posts Automáticos</option>
+                  <option>Criação de Páginas & Landing Pages</option>
+                  <option>Pesquisa Brasil</option>
+                  <option>Mineiro de Dados</option>
+                  <option>Gerador de Códigos EAN</option>
+                  <option>Automações Gerais</option>
+                  <option>Consultoria de Automação</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" placeholder="Descreva brevemente o que você precisa..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-wpp" style="width:100%;justify-content:center;">
+                <i class="fab fa-whatsapp"></i> Enviar pelo WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /home-page -->
+
+  <!-- ============ COTAÇÕES PAGE ============ -->
+  <div id="cotacoes-page" class="page">
+    <section style="background:linear-gradient(135deg,var(--primary-dark),var(--primary-light));color:var(--white);padding:70px 0;text-align:center;">
+      <div class="container">
+        <div class="hero-badge" style="margin:0 auto 20px;width:fit-content;">
+          <i class="fab fa-whatsapp"></i> Sistema Principal
+        </div>
+        <h1 style="font-size:2.8rem;font-weight:800;margin-bottom:16px;letter-spacing:-1px;">QG.Cotações</h1>
+        <p style="font-size:1.1rem;opacity:0.85;max-width:560px;margin:0 auto 32px;">Cotação de frete via WhatsApp — do pedido ao retorno em até 15 minutos.</p>
+        <a href="https://wa.me/5543996349824?text=Quero%20conhecer%20o%20QG.Cota%C3%A7%C3%B5es!" target="_blank" class="btn btn-wpp btn-lg">
+          <i class="fab fa-whatsapp"></i> Começar agora
+        </a>
+      </div>
+    </section>
+
+    <section style="padding:80px 0;background:var(--off-white);">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">Como Funciona</div>
+          <h2>O processo completo</h2>
+          <p>Simples, rápido e 100% no WhatsApp que você já usa.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;max-width:900px;margin:0 auto;">
+          <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px;text-align:center;box-shadow:var(--shadow-sm);">
+            <div style="width:60px;height:60px;border-radius:50%;background:rgba(37,211,102,0.12);color:var(--accent-dark);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 16px;">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <h3 style="color:var(--primary);font-size:1rem;font-weight:700;margin-bottom:8px;">1. Cliente solicita</h3>
+            <p style="font-size:0.88rem;color:var(--mid-gray);">Envia peso, dimensões, origem e destino pelo WhatsApp</p>
+          </div>
+          <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px;text-align:center;box-shadow:var(--shadow-sm);">
+            <div style="width:60px;height:60px;border-radius:50%;background:rgba(250,135,0,0.12);color:var(--secondary-dark);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 16px;">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3 style="color:var(--primary);font-size:1rem;font-weight:700;margin-bottom:8px;">2. Sistema dispara</h3>
+            <p style="font-size:0.88rem;color:var(--mid-gray);">Automaticamente para todas as transportadoras cadastradas</p>
+          </div>
+          <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px;text-align:center;box-shadow:var(--shadow-sm);">
+            <div style="width:60px;height:60px;border-radius:50%;background:rgba(13,27,62,0.08);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 16px;">
+              <i class="fas fa-truck"></i>
+            </div>
+            <h3 style="color:var(--primary);font-size:1rem;font-weight:700;margin-bottom:8px;">3. Transportadoras respondem</h3>
+            <p style="font-size:0.88rem;color:var(--mid-gray);">Cada uma informa valor e prazo diretamente pelo WhatsApp</p>
+          </div>
+          <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px;text-align:center;box-shadow:var(--shadow-sm);">
+            <div style="width:60px;height:60px;border-radius:50%;background:rgba(13,27,62,0.85);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 16px;">
+              <i class="fas fa-check-double"></i>
+            </div>
+            <h3 style="color:var(--primary);font-size:1rem;font-weight:700;margin-bottom:8px;">4. Cliente escolhe</h3>
+            <p style="font-size:0.88rem;color:var(--mid-gray);">Recebe todas as opções consolidadas e escolhe a melhor</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:80px 0;background:var(--white);">
+      <div class="container">
+        <div style="max-width:700px;margin:0 auto;text-align:center;">
+          <div class="section-label">Para quem é?</div>
+          <h2 style="font-size:2.2rem;font-weight:800;color:var(--primary);margin:16px 0 20px;letter-spacing:-0.5px;">Ideal para empresas que cotam frete com frequência</h2>
+          <p style="color:var(--mid-gray);margin-bottom:40px;">Se você perde tempo ligando para transportadoras ou preenchendo formulários de cotação, o QG.Cotações foi feito para você.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;text-align:left;margin-bottom:40px;">
+            <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;color:var(--dark-gray);">
+              <i class="fas fa-check-circle" style="color:var(--accent-dark)"></i> E-commerces
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;color:var(--dark-gray);">
+              <i class="fas fa-check-circle" style="color:var(--accent-dark)"></i> Distribuidoras
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;color:var(--dark-gray);">
+              <i class="fas fa-check-circle" style="color:var(--accent-dark)"></i> Indústrias
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;color:var(--dark-gray);">
+              <i class="fas fa-check-circle" style="color:var(--accent-dark)"></i> Atacadistas
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;color:var(--dark-gray);">
+              <i class="fas fa-check-circle" style="color:var(--accent-dark)"></i> Importadores/Exportadores
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;color:var(--dark-gray);">
+              <i class="fas fa-check-circle" style="color:var(--accent-dark)"></i> Qualquer empresa com logística
+            </div>
+          </div>
+          <a href="https://wa.me/5543996349824?text=Quero%20conhecer%20o%20QG.Cota%C3%A7%C3%B5es!" target="_blank" class="btn btn-wpp btn-lg">
+            <i class="fab fa-whatsapp"></i> Quero o QG.Cotações
+          </a>
+        </div>
+      </div>
+    </section>
+  </div><!-- /cotacoes-page -->
+
+  <!-- ============ SERVIÇOS PAGE ============ -->
+  <div id="servicos-page" class="page">
+    <section style="background:linear-gradient(135deg,var(--primary-dark),var(--primary-light));color:var(--white);padding:70px 0;text-align:center;">
+      <div class="container">
+        <h1 style="font-size:2.8rem;font-weight:800;margin-bottom:16px;letter-spacing:-1px;">Nossos Serviços</h1>
+        <p style="font-size:1.1rem;opacity:0.85;max-width:560px;margin:0 auto;">Scripts, automações e sistemas que eliminam processos manuais e economizam horas do seu dia.</p>
+      </div>
+    </section>
+
+    <section style="padding:80px 0;">
+      <div class="container">
+
+        <!-- QG.Cotações -->
+        <div style="background:linear-gradient(135deg,rgba(37,211,102,0.05),rgba(18,140,126,0.08));border:2px solid rgba(37,211,102,0.2);border-radius:var(--radius-xl);padding:40px;margin-bottom:32px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;">
+          <div>
+            <div style="display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--white);padding:5px 14px;border-radius:var(--radius-full);font-size:0.75rem;font-weight:700;margin-bottom:16px;">
+              ⭐ Produto Principal
+            </div>
+            <h2 style="font-size:1.8rem;font-weight:800;color:var(--primary);margin-bottom:12px;">QG.Cotações</h2>
+            <p style="color:var(--dark-gray);margin-bottom:16px;line-height:1.7;">Sistema de cotação de frete 100% via WhatsApp. Cliente pede, sistema dispara para as transportadoras, em 15 minutos o cliente tem todas as opções. Cadastro e gestão também pelo WhatsApp.</p>
+            <a href="#" onclick="showPage('cotacoes')" class="btn btn-wpp"><i class="fab fa-whatsapp"></i> Saiba mais</a>
+          </div>
+          <div style="font-size:4rem;opacity:0.3;">🚚</div>
+        </div>
+
+        <!-- Grid de serviços -->
+        <div class="servicos-grid">
+          <div class="servico-card">
+            <div class="servico-icon-wrap bg-green-soft"><i class="fab fa-whatsapp"></i></div>
+            <h3>Sistemas Customizados via WhatsApp</h3>
+            <p>Qualquer sistema operado 100% pelo WhatsApp. Cadastros, consultas, fluxos de aprovação, notificações — tudo sem sair do app. Desenvolvido sob medida para o seu negócio.</p>
+            <a href="https://wa.me/5543996349824?text=Quero%20um%20sistema%20customizado%20via%20WhatsApp!" target="_blank" class="btn btn-sm btn-outline">Solicitar</a>
+          </div>
+
+          <div class="servico-card">
+            <div class="servico-icon-wrap bg-orange-soft"><i class="fab fa-instagram"></i></div>
+            <h3>Postador de Status no Instagram</h3>
+            <p>Automatize a postagem de stories e status no Instagram. Programe o conteúdo com antecedência e o robô posta nos melhores horários automaticamente.</p>
+            <a href="https://wa.me/5543996349824?text=Quero%20o%20Postador%20de%20Status%20do%20Instagram!" target="_blank" class="btn btn-sm btn-outline">Solicitar</a>
+          </div>
+
+          <div class="servico-card">
+            <div class="servico-icon-wrap bg-blue-soft"><i class="fab fa-facebook"></i></div>
+            <h3>Postagens Automáticas no Facebook</h3>
+            <p>Publicações automáticas no Facebook com agendamento inteligente. Mantenha sua página ativa sem precisar postar manualmente todo dia.</p>
+            <a href="https://wa.me/5543996349824?text=Quero%20postagens%20autom%C3%A1ticas%20no%20Facebook!" target="_blank" class="btn btn-sm btn-outline">Solicitar</a>
+          </div>
+
+          <div class="servico-card">
+            <div class="servico-icon-wrap bg-purple-soft"><i class="fas fa-file-code"></i></div>
+            <h3>Criação de Páginas & Landing Pages</h3>
+            <p>Páginas profissionais e landing pages de alta conversão criadas com automação. Rápido, bonito e otimizado para resultados.</p>
+            <a href="https://wa.me/5543996349824?text=Quero%20uma%20landing%20page!" target="_blank" class="btn btn-sm btn-outline">Solicitar</a>
+          </div>
+
+          <div class="servico-card">
+            <div class="servico-icon-wrap bg-teal-soft"><i class="fas fa-map-marked-alt"></i></div>
+            <h3>Pesquisa Brasil</h3>
+            <p>Script que pesquisa qualquer segmento em escala nacional pelo Google Maps. Filtre por cidade, estado ou todo o Brasil. Ideal para prospecção e análise de mercado.</p>
+            <a href="https://wa.me/5543996349824?text=Quero%20o%20Pesquisa%20Brasil!" target="_blank" class="btn btn-sm btn-outline">Solicitar</a>
+          </div>
+
+          <div class="servico-card">
+            <div class="servico-icon-wrap bg-purple-soft"><i class="fas fa-database"></i></div>
+            <h3>Mineiro de Dados</h3>
+            <p>Filtro avançado de CNPJs da base da Receita Federal. Segmente por CNAE, porte, localização, situação cadastral e muito mais. Listas limpas e qualificadas.</p>
+            <a href="https://wa.me/5543996349824?text=Quero%20o%20Mineiro%20de%20Dados!" target="_blank" class="btn btn-sm btn-outline">Solicitar</a>
+          </div>
+
+          <div class="servico-card">
+            <div class="servico-icon-wrap bg-red-soft"><i class="fas fa-barcode"></i></div>
+            <h3>Gerador de Códigos EAN</h3>
+            <p>Geração em lote de códigos EAN válidos. Ideal para e-commerces, distribuidoras e indústrias. Rápido, preciso e em grande escala.</p>
+            <a href="https://wa.me/5543996349824?text=Quero%20o%20Gerador%20de%20C%C3%B3digos%20EAN!" target="_blank" class="btn btn-sm btn-outline">Solicitar</a>
+          </div>
+
+          <div class="servico-card">
+            <div class="servico-icon-wrap bg-orange-soft"><i class="fas fa-cogs"></i></div>
+            <h3>Automações Gerais em Páginas</h3>
+            <p>Automações customizadas para qualquer página web ou sistema. Scraping, preenchimento automático, integração entre sistemas — o que precisar.</p>
+            <a href="https://wa.me/5543996349824?text=Preciso%20de%20uma%20automa%C3%A7%C3%A3o%20geral!" target="_blank" class="btn btn-sm btn-outline">Solicitar</a>
+          </div>
+
+          <div class="servico-card" style="border-color:rgba(250,135,0,0.3);background:rgba(250,135,0,0.02);">
+            <div class="servico-icon-wrap bg-orange-soft"><i class="fas fa-user-tie"></i></div>
+            <h3>Consultoria de Automação</h3>
+            <p>Visita presencial à sua empresa. Avaliação de todos os setores, conversa com a equipe e relatório completo com todas as automações possíveis.</p>
+            <a href="#" onclick="showPage('consultoria')" class="btn btn-sm btn-primary">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div><!-- /servicos-page -->
+
+  <!-- ============ CONSULTORIA PAGE ============ -->
+  <div id="consultoria-page" class="page">
+    <section style="background:linear-gradient(135deg,var(--primary-dark),var(--primary-light));color:var(--white);padding:70px 0;text-align:center;">
+      <div class="container">
+        <h1 style="font-size:2.8rem;font-weight:800;margin-bottom:16px;letter-spacing:-1px;">Consultoria de Automação</h1>
+        <p style="font-size:1.1rem;opacity:0.85;max-width:600px;margin:0 auto 32px;">Vou até a sua empresa, avalio os setores, converso com a equipe e entrego um relatório completo com tudo que pode ser automatizado.</p>
+        <a href="https://wa.me/5543996349824?text=Quero%20agendar%20uma%20consultoria%20de%20automa%C3%A7%C3%A3o!" target="_blank" class="btn btn-primary btn-lg">
+          <i class="fas fa-calendar-check"></i> Agendar Consultoria
+        </a>
+      </div>
+    </section>
+
+    <section style="padding:80px 0;background:var(--off-white);">
+      <div class="container">
+        <div style="max-width:800px;margin:0 auto;">
+          <div class="section-heading">
+            <div class="section-label">O Processo</div>
+            <h2>Como funciona a consultoria</h2>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:24px;">
+            <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px;display:flex;gap:20px;align-items:flex-start;box-shadow:var(--shadow-sm);">
+              <div style="width:48px;height:48px;border-radius:50%;background:var(--secondary);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;flex-shrink:0;">1</div>
+              <div>
+                <h3 style="color:var(--primary);font-size:1.05rem;font-weight:700;margin-bottom:8px;">Visita presencial à empresa</h3>
+                <p style="color:var(--dark-gray);font-size:0.92rem;line-height:1.7;">Vou pessoalmente até a sua empresa para ver como os processos funcionam na prática. Nada de diagnóstico remoto — preciso ver o ambiente real para identificar oportunidades reais.</p>
+              </div>
+            </div>
+            <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px;display:flex;gap:20px;align-items:flex-start;box-shadow:var(--shadow-sm);">
+              <div style="width:48px;height:48px;border-radius:50%;background:var(--secondary);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;flex-shrink:0;">2</div>
+              <div>
+                <h3 style="color:var(--primary);font-size:1.05rem;font-weight:700;margin-bottom:8px;">Conversa com cada setor</h3>
+                <p style="color:var(--dark-gray);font-size:0.92rem;line-height:1.7;">Converso diretamente com os colaboradores de cada área para entender as dores reais: o que é chato, o que consome tempo desnecessariamente, o que poderia ser feito por um robô.</p>
+              </div>
+            </div>
+            <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px;display:flex;gap:20px;align-items:flex-start;box-shadow:var(--shadow-sm);">
+              <div style="width:48px;height:48px;border-radius:50%;background:var(--secondary);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;flex-shrink:0;">3</div>
+              <div>
+                <h3 style="color:var(--primary);font-size:1.05rem;font-weight:700;margin-bottom:8px;">Relatório completo de automações</h3>
+                <p style="color:var(--dark-gray);font-size:0.92rem;line-height:1.7;">Entrego um relatório detalhado com todas as automações identificadas, os sistemas recomendados, as linguagens de programação utilizadas, uso de IA onde aplicável e o impacto estimado em redução de tempo e melhoria de processos para cada setor.</p>
+              </div>
+            </div>
+            <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px;display:flex;gap:20px;align-items:flex-start;box-shadow:var(--shadow-sm);">
+              <div style="width:48px;height:48px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;flex-shrink:0;">4</div>
+              <div>
+                <h3 style="color:var(--primary);font-size:1.05rem;font-weight:700;margin-bottom:8px;">Implementação (opcional)</h3>
+                <p style="color:var(--dark-gray);font-size:0.92rem;line-height:1.7;">Se quiser, posso implementar as automações identificadas. Mas a consultoria em si já entrega valor enorme — você sai com um roadmap completo de automação para a sua empresa.</p>
+              </div>
+            </div>
+          </div>
+          <div style="text-align:center;margin-top:48px;">
+            <a href="https://wa.me/5543996349824?text=Quero%20agendar%20uma%20consultoria%20de%20automa%C3%A7%C3%A3o!" target="_blank" class="btn btn-primary btn-lg">
+              <i class="fas fa-calendar-check"></i> Agendar minha consultoria
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div><!-- /consultoria-page -->
+
+  <!-- ============ SOBRE PAGE ============ -->
+  <div id="sobre-page" class="page">
+    <section style="background:linear-gradient(135deg,var(--primary-dark),var(--primary-light));color:var(--white);padding:70px 0;text-align:center;">
+      <div class="container">
+        <h1 style="font-size:2.8rem;font-weight:800;margin-bottom:16px;letter-spacing:-1px;">Sobre a QG.Digital</h1>
+        <p style="font-size:1.1rem;opacity:0.85;max-width:560px;margin:0 auto;">Uma empresa de uma pessoa só, trabalhando em conjunto a vários robôs. Baseada em Londrina, Paraná.</p>
+      </div>
+    </section>
+
+    <section class="sobre" style="padding-top:80px;">
+      <div class="container">
+        <div class="sobre-grid">
+          <div class="sobre-text">
+            <div class="section-label">Nossa História</div>
+            <h2>Uma pessoa.<br>Vários <span>robôs.</span><br>Resultados reais.</h2>
+            <p>A QG.Digital nasceu da ideia de que tecnologia bem aplicada pode fazer o trabalho de uma equipe inteira. Sou uma empresa de uma pessoa só — mas trabalho em conjunto com múltiplas automações e IAs para entregar resultados que empresas maiores não conseguem com velocidade e custo equivalentes.</p>
+            <p>Minha especialidade é identificar processos manuais chatos e repetitivos e transformá-los em automações eficientes. Do atendimento ao cliente à cotação de frete, da prospecção de leads à postagem nas redes sociais — tudo pode ser automatizado.</p>
+            <p>A Julia é minha principal "colaboradora" — uma IA avançada especializada em conversas naturais e automação de tarefas. Juntos, operamos 24/7 sem pausas.</p>
+            <div class="sobre-diferenciais">
+              <div class="diferencial-item">
+                <div class="dif-icon"><i class="fas fa-bolt"></i></div>
+                <div class="dif-text">
+                  <strong>Agilidade real</strong>
+                  <span>Entrega rápida, sem burocracia</span>
+                </div>
+              </div>
+              <div class="diferencial-item">
+                <div class="dif-icon"><i class="fas fa-dollar-sign"></i></div>
+                <div class="dif-text">
+                  <strong>Preço justo</strong>
+                  <span>Sem overhead de equipe grande</span>
+                </div>
+              </div>
+              <div class="diferencial-item">
+                <div class="dif-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="dif-text">
+                  <strong>Tudo via WhatsApp</strong>
+                  <span>Simples e acessível para todos</span>
+                </div>
+              </div>
+              <div class="diferencial-item">
+                <div class="dif-icon"><i class="fas fa-robot"></i></div>
+                <div class="dif-text">
+                  <strong>IA quando necessário</strong>
+                  <span>Tecnologia de ponta acessível</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sobre-visual">
+            <div class="sobre-card-main">
+              <div class="big-num">1+∞</div>
+              <p>Uma pessoa humana + infinitos robôs trabalhando juntos</p>
+            </div>
+            <div class="sobre-cards-row">
+              <div class="sobre-mini-card">
+                <div class="mini-icon">🤖</div>
+                <strong>Julia</strong>
+                <span>IA Principal</span>
+              </div>
+              <div class="sobre-mini-card">
+                <div class="mini-icon">📍</div>
+                <strong>Londrina/PR</strong>
+                <span>Base de operações</span>
+              </div>
+              <div class="sobre-mini-card">
+                <div class="mini-icon">⚡</div>
+                <strong>24/7</strong>
+                <span>Operação contínua</span>
+              </div>
+              <div class="sobre-mini-card">
+                <div class="mini-icon">🇧🇷</div>
+                <strong>Brasil</strong>
+                <span>Atendimento nacional</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div><!-- /sobre-page -->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" onclick="showPage('home')" class="logo">QG<span>.</span>Digital</a>
+          <p>Automação inteligente para empresas que querem crescer sem aumentar a equipe. Uma pessoa + vários robôs = resultados reais.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/quebra_galho.digital/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5543996349824" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Produtos</h4>
+          <ul>
+            <li><a href="#" onclick="showPage('cotacoes')">QG.Cotações</a></li>
+            <li><a href="#" onclick="showPage('servicos')">Pesquisa Brasil</a></li>
+            <li><a href="#" onclick="showPage('servicos')">Mineiro de Dados</a></li>
+            <li><a href="#" onclick="showPage('servicos')">Gerador EAN</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Serviços</h4>
+          <ul>
+            <li><a href="#" onclick="showPage('servicos')">Sistemas via WhatsApp</a></li>
+            <li><a href="#" onclick="showPage('servicos')">Postador Automático</a></li>
+            <li><a href="#" onclick="showPage('servicos')">Landing Pages</a></li>
+            <li><a href="#" onclick="showPage('servicos')">Automações Gerais</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#" onclick="showPage('sobre')">Sobre</a></li>
+            <li><a href="#" onclick="showPage('consultoria')">Consultoria</a></li>
+            <li><a href="https://wa.me/5543996349824" target="_blank">Contato</a></li>
+            <li><a href="https://www.instagram.com/quebra_galho.digital/" target="_blank">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 QG.Digital — Londrina, Paraná. Todos os direitos reservados.</p>
+        <a href="https://wa.me/5543996349824" target="_blank"><i class="fab fa-whatsapp"></i> (43) 99634-9824</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Float WhatsApp Button -->
+  <a href="https://wa.me/5543996349824?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais!" target="_blank" class="float-wpp" title="Falar no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
