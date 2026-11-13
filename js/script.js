@@ -31,3 +31,15 @@ var observer = new IntersectionObserver(function (entries) {
   });
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-up').forEach(function (el) { observer.observe(el); });
+
+// item ativo do menu conforme a rolagem
+var secoes = Array.prototype.slice.call(document.querySelectorAll('section[id]'));
+var links = document.querySelectorAll('.nav-links a.nav-link[href^="#"]');
+function marcarMenu() {
+  var y = window.scrollY + 140, atual = 'topo';
+  secoes.forEach(function (s) { if (s.offsetTop <= y) atual = s.id; });
+  if (window.scrollY < 200) atual = 'topo';
+  links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + atual); });
+}
+window.addEventListener('scroll', marcarMenu);
+marcarMenu();
