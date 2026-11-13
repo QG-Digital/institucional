@@ -1,0 +1,46 @@
+/* Página do Extrator de Empresas — azul-marinho + laranja neon (cores da logo do app) */
+.ex-hero{padding:80px 0 150px;color:#fff;background:radial-gradient(circle at 78% 30%,rgba(250,135,0,.28),transparent 42%),linear-gradient(135deg,#080f22 0%,#0d1b3e 55%,#162d5e 100%);overflow:hidden}
+.ex-hero-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.ex-brand{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.ex-brand img{width:72px;height:72px;border-radius:18px;box-shadow:0 0 0 1px rgba(255,255,255,.12),0 12px 34px -8px rgba(250,135,0,.85)}
+.ex-brand .li-tag{color:#ffc266;background:rgba(250,135,0,.16);border-color:rgba(255,170,51,.4);margin:0}
+.ex-hero h1{font-size:3rem;font-weight:800;line-height:1.08;letter-spacing:-1px;margin-bottom:18px}
+.ex-hero h1 b{color:#ffaa33}
+.ex-lead{color:#c9d3ea;font-size:1.12rem;line-height:1.7;margin-bottom:28px}
+.ex-lead b{color:#fff}
+.ex-meta{margin-top:18px;color:rgba(255,255,255,.55);font-size:.85rem}
+.ex-hero .btn-li,.ex-final .btn-li{background:linear-gradient(45deg,#ffaa33,#fa8700,#d97000);color:#fff;box-shadow:0 12px 26px -10px rgba(250,135,0,.85)}
+.ex-hero .btn-li:hover,.ex-final .btn-li:hover{transform:translateY(-2px);box-shadow:0 18px 30px -12px rgba(250,135,0,.95)}
+.ex-window{border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 40px 80px -24px rgba(0,0,0,.75),0 0 0 1px rgba(255,255,255,.1);transform:perspective(1400px) rotateY(-5deg)}
+.ex-window>img{display:block;width:100%;height:auto}
+.ex-bar{background:#f3f5fb;border-bottom-color:#e8ecf4}.ex-bar i b{background:#ffd8a8}
+.ex-como{padding:96px 0;background:var(--off-white)}
+.ex-passos{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.ex-passo{padding:30px 26px;border-radius:20px;background:#fff;border:1px solid var(--light-gray);box-shadow:var(--shadow-sm);transition:transform .3s,box-shadow .3s}
+.ex-passo:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
+.ex-passo span{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:linear-gradient(45deg,#ffaa33,#fa8700);color:#fff;font-weight:800;font-size:1.2rem;margin-bottom:16px;box-shadow:0 10px 22px -10px rgba(250,135,0,.8)}
+.ex-passo h3{font-size:1.15rem;font-weight:700;color:var(--primary);margin-bottom:8px}
+.ex-passo p{color:var(--dark-gray);font-size:.95rem;line-height:1.65}
+.ex-feat{padding:96px 0;background:#fff}
+.ex-feat.ex-alt{background:var(--off-white)}
+.ex-split{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:center}
+.ex-split-rev{grid-template-columns:1.15fr 1fr}
+.ex-split h2{font-size:2.1rem;font-weight:800;color:var(--primary);line-height:1.15;margin:10px 0 16px}
+.ex-split p{color:var(--dark-gray);line-height:1.75;font-size:1.02rem}
+.ex-dados{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.ex-dados li{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;background:var(--off-white);border:1px solid var(--light-gray);font-weight:500;color:var(--primary)}
+.ex-dados li i{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:rgba(250,135,0,.12);color:var(--secondary-dark)}
+.ex-shot{border-radius:16px;overflow:hidden;box-shadow:var(--shadow-xl);border:1px solid var(--light-gray)}
+.ex-shot img{display:block;width:100%;height:auto}
+.ex-list{margin:22px 0 0}
+.ex-list li{color:var(--primary)}
+.ex-list li i{background:linear-gradient(45deg,#ffaa33,#fa8700);color:#fff}
+.ex-faq{padding:96px 0}
+.ex-final{margin-top:48px;text-align:center;padding:44px 24px;border-radius:24px;color:#fff;background:radial-gradient(circle at 80% 20%,rgba(250,135,0,.3),transparent 45%),linear-gradient(135deg,#080f22,#0d1b3e 60%,#162d5e)}
+.ex-final h3{font-size:1.6rem;font-weight:800;margin-bottom:18px}
+@media(max-width:1000px){.ex-passos{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){
+  .ex-hero{padding:56px 0 130px}.ex-hero-grid,.ex-split,.ex-split-rev{grid-template-columns:1fr;gap:36px}
+  .ex-hero h1{font-size:2.3rem}.ex-window{transform:none}.ex-dados{grid-template-columns:1fr}
+}
+@media(max-width:560px){.ex-passos{grid-template-columns:1fr}}
