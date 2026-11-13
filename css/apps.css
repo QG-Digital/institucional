@@ -143,3 +143,16 @@ section[id]{scroll-margin-top:70px}
 .ex-card .btn-li:hover{box-shadow:0 18px 30px -12px rgba(250,135,0,.95)}
 .ex-card .li-shot{transform:perspective(1400px) rotateY(4deg)}
 @media(max-width:900px){.ex-card .li-shot{transform:none}}
+
+/* celular: cards de produto mais compactos */
+.li-shot picture{display:block}
+@media(max-width:600px){
+  .apps{padding-top:64px}
+  .li-card{padding:26px 18px;border-radius:22px;gap:26px}
+  .li-brand{gap:12px}.li-brand img{width:52px;height:52px}
+  .li-brand h3{font-size:1.55rem}
+  .li-tag{font-size:.6rem;letter-spacing:1px;white-space:nowrap}
+  .li-card p{font-size:.97rem}
+  .li-list{margin:18px 0 22px;gap:10px}
+  .li-ctas{flex-direction:column}.li-ctas .btn{width:100%;justify-content:center}
+}

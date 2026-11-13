@@ -44,3 +44,18 @@
   .ex-hero h1{font-size:2.3rem}.ex-window{transform:none}.ex-dados{grid-template-columns:1fr}
 }
 @media(max-width:560px){.ex-passos{grid-template-columns:1fr}}
+
+.ex-window picture,.ex-shot picture{display:block}.ex-window>picture img,.ex-shot img{display:block;width:100%;height:auto}
+@media(max-width:600px){
+  .ex-hero{padding:40px 0 110px}
+  .ex-hero h1{font-size:2.1rem}
+  .ex-lead{font-size:1rem}
+  .ex-hero .li-ctas,.ex-final .btn{width:100%}
+  .ex-hero .li-ctas .btn{width:100%;justify-content:center}
+  .ex-como,.ex-feat,.ex-faq{padding:56px 0}
+  .ex-split h2{font-size:1.6rem}
+  .ex-passo{padding:22px 20px}
+  .ex-final{padding:32px 18px;margin-top:32px}.ex-final h3{font-size:1.3rem}
+  .ex-final .btn{justify-content:center}
+  .section-heading{margin-bottom:32px}
+}
