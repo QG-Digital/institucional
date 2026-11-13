@@ -1,130 +1,325 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>QG Digital | Aplicativos que economizam o seu tempo</title>
-  <meta name="description" content="A QG Digital desenvolve aplicativos para quem tem um negócio. Conheça o LocalInsta, que mantém o seu Instagram sempre ativo.">
-  <meta name="theme-color" content="#10B981">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QG.Digital | Aplicativos que trabalham por você</title>
+  <meta name="description" content="QG.Digital — aplicativos próprios que automatizam o dia a dia de quem tem um negócio. Conheça o LocalInsta, que mantém o seu Instagram sempre ativo.">
+  <meta name="theme-color" content="#0d1b3e">
+  <meta property="og:title" content="QG.Digital | Aplicativos que trabalham por você">
+  <meta property="og:description" content="Aplicativos próprios da QG.Digital. O primeiro, o LocalInsta, mantém o seu Instagram sempre ativo.">
+  <meta property="og:url" content="https://qg-digital.github.io/institucional/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="QG Digital | Aplicativos que economizam o seu tempo">
-  <meta property="og:description" content="Conheça os aplicativos da QG Digital. O principal é o LocalInsta, que mantém o seu Instagram sempre ativo.">
   <meta property="og:image" content="https://localinsta.com.br/assets/media/localinsta-rebrand-v1210.webp">
   <link rel="icon" type="image/svg+xml" href="img/qg-logo.svg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "QG.Digital",
+    "url": "https://qg-digital.github.io/institucional/",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+55-43-99634-9824",
+      "contactType": "customer service",
+      "areaServed": "BR",
+      "availableLanguage": "Portuguese"
+    },
+    "sameAs": ["https://www.instagram.com/quebra_galho.digital/", "https://github.com/QG-Digital"]
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/apps.css">
 </head>
-<body>
+<body id="topo">
 
-<header class="top">
-  <div class="wrap top-in">
-    <a class="brand" href="#topo" aria-label="QG Digital"><img src="img/qg-logo.svg" alt="QG Digital" width="55" height="46"></a>
-    <nav class="nav" aria-label="Principal">
-      <a href="#apps">Aplicativos</a>
-      <a href="#sobre">Sobre</a>
-      <a class="keep" href="#contato">Contato</a>
-    </nav>
-  </div>
-</header>
-
-<main id="topo">
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="kicker">QG Digital</span>
-        <h1>Aplicativos que <span class="accent">trabalham por você.</span></h1>
-        <p class="lead">A QG Digital cria aplicativos para quem tem um negócio e pouco tempo. O principal é o LocalInsta, que mantém o seu Instagram sempre ativo, direto do seu computador.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://localinsta.com.br/" target="_blank" rel="noopener">Conhecer o LocalInsta</a>
-          <a class="btn btn-soft" href="#apps">Ver aplicativos</a>
-        </div>
-      </div>
-      <div class="win" aria-hidden="true">
-        <div class="win-bar"><img src="https://localinsta.com.br/logo.png" alt=""><span>LocalInsta</span><i><b></b><b></b><b></b></i></div>
-        <img src="https://localinsta.com.br/assets/media/localinsta-tour-tela.jpg" width="1280" height="800" alt="" loading="eager">
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">QG<span>.</span>Digital</div>
+      <div class="loader-dots">
+        <div class="loader-dot"></div>
+        <div class="loader-dot"></div>
+        <div class="loader-dot"></div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section id="apps" class="soft">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="kicker">Aplicativos</span>
-        <h2>O que a QG Digital já tem para você.</h2>
-        <p>Cada aplicativo resolve uma tarefa do dia a dia do seu negócio. Por enquanto, um já está no ar e outro está a caminho.</p>
-      </div>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#topo" class="logo" aria-label="QG Digital"><img src="img/qg-logo.svg" alt="QG Digital" width="55" height="46"></a>
+      <nav class="nav">
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#topo" class="nav-link active">Início</a></li>
+          <li><a href="#apps" class="nav-link">Aplicativos</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#duvidas" class="nav-link">Dúvidas</a></li>
+          <li><a href="https://wa.me/5543996349824?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20aplicativos%20da%20QG.Digital" target="_blank" rel="noopener" class="nav-link nav-cta"><i class="fab fa-whatsapp"></i> Falar Agora</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-      <article class="feat">
-        <div>
-          <div class="app-head">
-            <img src="https://localinsta.com.br/logo.png" width="52" height="52" alt="Logo do LocalInsta">
-            <div><h3>LocalInsta</h3><span class="tag">Aplicativo principal</span></div>
+  <main>
+
+    <!-- Hero -->
+    <section class="hero-home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-laptop-code"></i>
+            Aplicativos próprios da QG.Digital
           </div>
-          <p>O LocalInsta escreve as legendas, escolhe os horários e publica o seu Feed e os Stories no Instagram. Enquanto você cuida do negócio, a sua conta continua aparecendo para novos clientes.</p>
-          <ul class="ticks">
-            <li>Publica Feed e Stories automaticamente</li>
-            <li>Legendas escritas com IA, no jeito da sua empresa</li>
-            <li>Roda no seu computador com Windows, com privacidade</li>
-            <li>30 dias grátis para testar</li>
+          <h1>
+            Tecnologia que<br>
+            trabalha por você,<br>
+            <span class="highlight">todo dia.</span>
+          </h1>
+          <p class="hero-sub">
+            A QG.Digital cria aplicativos que automatizam tarefas de quem tem um negócio e pouco tempo. O primeiro, o LocalInsta, já está no ar e mantém o seu Instagram sempre ativo.
+          </p>
+          <div class="hero-ctas">
+            <a href="https://localinsta.com.br/" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+              <i class="fas fa-arrow-up-right-from-square"></i> Conhecer o LocalInsta
+            </a>
+            <a href="#apps" class="btn btn-secondary btn-lg">
+              Ver aplicativos
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-window">
+            <div class="hero-window-bar"><img src="https://localinsta.com.br/logo.png" alt=""><span>LocalInsta</span><i><b></b><b></b><b></b></i></div>
+            <img src="https://localinsta.com.br/assets/media/localinsta-tour-tela.jpg" width="1280" height="800" alt="Tela do LocalInsta em funcionamento">
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong>30 dias</strong>
+              <span>Teste grátis do LocalInsta</span>
+            </div>
+            <div class="hero-stat">
+              <strong>IA</strong>
+              <span>Escreve as legendas</span>
+            </div>
+            <div class="hero-stat">
+              <strong>100%</strong>
+              <span>Roda no seu PC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aplicativos -->
+    <section class="apps" id="apps">
+      <div class="container">
+        <div class="section-heading fade-up">
+          <div class="section-label">Aplicativos</div>
+          <h2>Soluções feitas para o seu dia a dia</h2>
+          <p>Cada aplicativo da QG.Digital resolve uma tarefa de verdade do seu negócio. Um já está no ar e o próximo está a caminho.</p>
+        </div>
+
+        <article class="li-card fade-up">
+          <div>
+            <div class="li-brand">
+              <img src="https://localinsta.com.br/logo.png" width="64" height="64" alt="Ícone do LocalInsta">
+              <div>
+                <h3>Local<b>Insta</b></h3>
+                <span class="li-tag">Aplicativo principal · No ar</span>
+              </div>
+            </div>
+            <p>O LocalInsta escreve as legendas, escolhe os horários e publica o seu Feed e os Stories no Instagram. Enquanto você cuida do negócio, a sua conta continua aparecendo para novos clientes.</p>
+            <ul class="li-list">
+              <li><i class="fas fa-check"></i> Publica Feed e Stories automaticamente</li>
+              <li><i class="fas fa-check"></i> Legendas escritas com IA, no jeito da sua empresa</li>
+              <li><i class="fas fa-check"></i> Roda no seu computador com Windows, com privacidade</li>
+              <li><i class="fas fa-check"></i> 30 dias grátis para testar, sem cartão</li>
+            </ul>
+            <div class="li-ctas">
+              <a href="https://localinsta.com.br/" target="_blank" rel="noopener" class="btn btn-li"><i class="fas fa-download"></i> Baixar para Windows</a>
+              <a href="https://www.instagram.com/app.localinsta/" target="_blank" rel="noopener" class="btn btn-li-ghost"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+          </div>
+          <div class="li-shot">
+            <img src="https://localinsta.com.br/img/painel.webp" width="1700" height="1155" alt="Tela de Automação do LocalInsta" loading="lazy">
+          </div>
+        </article>
+
+        <article class="soon-card fade-up">
+          <div class="soon-icon"><i class="fas fa-location-dot"></i></div>
+          <div>
+            <h3>Gerador de Listas de Empresas <span>Em breve</span></h3>
+            <p>Encontra empresas por cidade e segmento e monta listas prontas para você prospectar clientes. Estamos finalizando e ele será o próximo aplicativo da QG.Digital.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="pilares" id="sobre">
+      <div class="container">
+        <div class="section-heading fade-up">
+          <div class="section-label">Sobre a QG.Digital</div>
+          <h2>Simples de usar. Feito para o seu negócio.</h2>
+          <p>A QG.Digital desenvolve aplicativos próprios, em Londrina, no Paraná. Cada um nasce de um problema real do dia a dia.</p>
+        </div>
+        <div class="pilares-grid">
+          <div class="pilar fade-up">
+            <div class="pilar-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+            <h3>Direto ao ponto</h3>
+            <p>Aplicativos simples, com tutorial no primeiro uso e manual, para você começar sem complicação.</p>
+          </div>
+          <div class="pilar fade-up">
+            <div class="pilar-icon"><i class="fas fa-shield-halved"></i></div>
+            <h3>No seu computador</h3>
+            <p>Os aplicativos rodam na sua máquina, e os seus dados ficam com você.</p>
+          </div>
+          <div class="pilar fade-up">
+            <div class="pilar-icon"><i class="fab fa-whatsapp"></i></div>
+            <h3>Atendimento direto</h3>
+            <p>Dúvidas e suporte pelo WhatsApp, falando com quem desenvolve.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dúvidas -->
+    <section class="faq" id="duvidas">
+      <div class="container">
+        <div class="section-heading fade-up">
+          <div class="section-label">Dúvidas Frequentes</div>
+          <h2>Perguntas &amp; Respostas</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>O LocalInsta pede cartão para testar?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Não. O teste grátis dura 30 dias e não pede cartão.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Funciona no Mac ou no celular?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Hoje o LocalInsta roda somente em computador com Windows.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Como faço para cancelar?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">É só não renovar o pagamento. Não precisa pedir cancelamento.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Quando sai o Gerador de Listas de Empresas?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Estamos finalizando e ainda não há data. Chame a gente no WhatsApp para ser avisado quando for lançado.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contato" id="contato">
+      <div class="container">
+        <div class="contato-grid">
+          <div class="contato-info fade-up">
+            <div class="section-label">Fale Conosco</div>
+            <h2>Vamos conversar?</h2>
+            <p>A forma mais rápida de falar com a QG.Digital é pelo WhatsApp. Tire dúvidas sobre o LocalInsta ou pergunte sobre os próximos aplicativos.</p>
+            <div class="contato-items">
+              <div class="contato-item">
+                <div class="contato-item-icon" style="background:rgba(37,211,102,0.1);color:var(--accent-dark)"><i class="fab fa-whatsapp"></i></div>
+                <div class="contato-item-info"><strong>WhatsApp (preferencial)</strong><a href="https://wa.me/5543996349824" target="_blank" rel="noopener">(43) 99634-9824</a></div>
+              </div>
+              <div class="contato-item">
+                <div class="contato-item-icon" style="background:rgba(250,135,0,0.1);color:var(--secondary-dark)"><i class="fas fa-envelope"></i></div>
+                <div class="contato-item-info"><strong>E-mail</strong><a href="mailto:atendimento.qgdigital@gmail.com">atendimento.qgdigital@gmail.com</a></div>
+              </div>
+              <div class="contato-item">
+                <div class="contato-item-icon" style="background:rgba(13,27,62,0.08);color:var(--primary)"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="contato-item-info"><strong>Localização</strong><span>Londrina, Paraná — Brasil</span></div>
+              </div>
+              <div class="contato-item">
+                <div class="contato-item-icon" style="background:rgba(200,50,200,0.1);color:#a030a0"><i class="fab fa-instagram"></i></div>
+                <div class="contato-item-info"><strong>Instagram</strong><a href="https://www.instagram.com/quebra_galho.digital/" target="_blank" rel="noopener">@quebra_galho.digital</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="contato-cta fade-up">
+            <h3>Prefere falar agora?</h3>
+            <p>Mande uma mensagem e a gente responde pelo WhatsApp.</p>
+            <a href="https://wa.me/5543996349824?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20QG.Digital%20e%20quero%20saber%20mais." target="_blank" rel="noopener" class="btn btn-wpp btn-lg"><i class="fab fa-whatsapp"></i> Chamar no WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#topo" class="logo">QG<span>.</span>Digital</a>
+          <p>Aplicativos próprios que automatizam o dia a dia de quem tem um negócio. Feito em Londrina, Paraná.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/quebra_galho.digital/" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5543996349824" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://github.com/QG-Digital" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Aplicativos</h4>
+          <ul>
+            <li><a href="https://localinsta.com.br/" target="_blank" rel="noopener">LocalInsta</a></li>
+            <li><a href="#apps">Gerador de Listas (em breve)</a></li>
           </ul>
-          <div class="cta-row" style="margin-top:0">
-            <a class="btn btn-primary" href="https://localinsta.com.br/" target="_blank" rel="noopener">Baixar para Windows</a>
-            <a class="btn btn-soft" href="https://www.instagram.com/app.localinsta/" target="_blank" rel="noopener">Instagram</a>
-          </div>
         </div>
-        <div class="shots">
-          <img src="https://localinsta.com.br/img/painel.webp" width="1700" height="1155" alt="Tela de Automação do LocalInsta" loading="lazy">
+        <div class="footer-col">
+          <h4>LocalInsta</h4>
+          <ul>
+            <li><a href="https://localinsta.com.br/privacidade.html" target="_blank" rel="noopener">Privacidade</a></li>
+            <li><a href="https://localinsta.com.br/termos.html" target="_blank" rel="noopener">Termos de uso</a></li>
+            <li><a href="https://www.instagram.com/app.localinsta/" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
         </div>
-      </article>
-
-      <article class="card dash" style="margin-top:22px">
-        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
-        <div class="app-head" style="margin-bottom:6px"><h3>Gerador de Listas de Empresas</h3><span class="tag soon">Em breve</span></div>
-        <p>Encontra empresas por cidade e segmento e monta listas prontas para você prospectar clientes. Estamos finalizando e ele será o próximo aplicativo da QG Digital.</p>
-      </article>
-    </div>
-  </section>
-
-  <section id="sobre">
-    <div class="wrap">
-      <div class="sec-head" style="margin-bottom:0">
-        <span class="kicker">Sobre</span>
-        <h2>Tecnologia simples, feita para o seu dia a dia.</h2>
-        <p>A QG Digital desenvolve aplicativos próprios. A ideia é que cada um resolva um problema real de quem tem um negócio, sem complicação e sem tomar o seu tempo.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contato" style="padding-top:0">
-    <div class="wrap">
-      <div class="contact">
-        <div>
-          <h2>Quer falar com a gente?</h2>
-          <p>Tem dúvida sobre o LocalInsta ou quer saber quando o próximo aplicativo sai? Chame a QG Digital.</p>
-        </div>
-        <div class="chan">
-          <a href="https://wa.me/5543996349824?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20aplicativos%20da%20QG%20Digital." target="_blank" rel="noopener"><div><small>WhatsApp</small><span>(43) 99634-9824</span></div></a>
-          <a href="mailto:atendimento.qgdigital@gmail.com"><div><small>E-mail</small><span>atendimento.qgdigital@gmail.com</span></div></a>
-          <a href="https://github.com/QG-Digital" target="_blank" rel="noopener"><div><small>GitHub</small><span>github.com/QG-Digital</span></div></a>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#duvidas">Dúvidas</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
         </div>
       </div>
+      <div class="footer-bottom">
+        <p>© 2026 QG.Digital — Londrina, Paraná. Todos os direitos reservados.</p>
+        <a href="https://wa.me/5543996349824" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> (43) 99634-9824</a>
+      </div>
     </div>
-  </section>
-</main>
+  </footer>
 
-<footer>
-  <div class="wrap foot">
-    <img src="img/qg-logo.svg" alt="QG Digital" width="52" height="44">
-    <p>© 2026 QG Digital. Todos os direitos reservados.</p>
-    <nav aria-label="Rodapé">
-      <a href="https://localinsta.com.br/" target="_blank" rel="noopener">LocalInsta</a>
-      <a href="https://localinsta.com.br/privacidade.html" target="_blank" rel="noopener">Privacidade</a>
-      <a href="https://localinsta.com.br/termos.html" target="_blank" rel="noopener">Termos</a>
-    </nav>
-  </div>
-</footer>
+  <!-- Float WhatsApp Button -->
+  <a href="https://wa.me/5543996349824?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais!" target="_blank" rel="noopener" class="float-wpp" title="Falar no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
+  <script src="js/script.js"></script>
 </body>
 </html>
